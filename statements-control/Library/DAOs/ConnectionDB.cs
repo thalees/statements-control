@@ -9,7 +9,7 @@ namespace Library.DAOs
 {
     class ConnectionDB
     {
-        public static SqlConnection GetConexao(string catalog, string userId, string password)
+        public static SqlConnection GetConnection(string catalog, string userId, string password)
         {
             string connectionString = $"Data Source=LOCALHOST; Initial Catalog = {catalog}; user id={userId}; password={password}";
             SqlConnection connection = new SqlConnection(connectionString);
