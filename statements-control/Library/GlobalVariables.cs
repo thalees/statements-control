@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class GlobalVariables
+    public static class GlobalVariables
     {
+        public static string catalogDB;
+        public static string userIdDB;
+        public static string passwordDB;
     }
 }
