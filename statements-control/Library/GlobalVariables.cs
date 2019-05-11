@@ -8,8 +8,8 @@ namespace Library
 {
     public static class GlobalVariables
     {
-        public static string catalog;
-        public static string userId;
-        public static string password;
+        public static string catalogDB;
+        public static string userIdDB;
+        public static string passwordDB;
     }
 }

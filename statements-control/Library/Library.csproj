@@ -43,15 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAOs\ConnectionDB.cs" />
+    <Compile Include="DAOs\MasterDAO.cs" />
     <Compile Include="ENUMs\MessageTypeENUM.cs" />
     <Compile Include="ENUMs\NavigationTypeENUM.cs" />
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VOs\MasterVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Exceptions\" />
-    <Folder Include="VOs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
