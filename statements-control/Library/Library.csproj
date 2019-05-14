@@ -49,7 +49,13 @@
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VOs\EnvironmentsVO.cs" />
+    <Compile Include="VOs\GoalsVO.cs" />
+    <Compile Include="VOs\InvestmentsVO.cs" />
     <Compile Include="VOs\MasterVO.cs" />
+    <Compile Include="VOs\StatementsVO.cs" />
+    <Compile Include="VOs\TypesVO.cs" />
+    <Compile Include="VOs\UsersVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Exceptions\" />
