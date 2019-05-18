@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace statements_control
 {
-    public partial class fr_Dashboard : Form
+    public partial class fr_Default : Form
     {
-        public fr_Dashboard()
+        public fr_Default()
         {
             InitializeComponent();
         }
