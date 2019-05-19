@@ -76,5 +76,36 @@ namespace Library
                 }
             }
         }
+
+        public static void SQLNonQueryProcedure(string procedureName, SqlParameter[] parameters)
+        {
+            using (SqlConnection connection = ConnectionDB.GetConnection(GlobalVariables.catalogDB, GlobalVariables.userIdDB, GlobalVariables.passwordDB))
+            {
+                using (SqlCommand command = new SqlCommand(procedureName, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    if (parameters != null)
+                        command.Parameters.AddRange(parameters);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static DataTable SQLSelectProcedure(string procedureName, SqlParameter[] parameters)
+        {
+            using (SqlConnection connection = ConnectionDB.GetConnection(GlobalVariables.catalogDB, GlobalVariables.userIdDB, GlobalVariables.passwordDB))
+            {
+                using (SqlDataAdapter adapter = new SqlDataAdapter(procedureName, connection))
+                {
+                    adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    if (parameters != null)
+                        adapter.SelectCommand.Parameters.AddRange(parameters);
+
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    return table;
+                }
+            }
+        }
     }
 }
