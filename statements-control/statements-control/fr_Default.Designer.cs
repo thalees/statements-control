@@ -35,25 +35,25 @@
             this.btn_Goals = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Investments = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Dashboard = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_Close = new System.Windows.Forms.Label();
+            this.lb_Minimize = new System.Windows.Forms.Label();
+            this.pb_UserImage = new System.Windows.Forms.PictureBox();
             this.lb_logo = new System.Windows.Forms.Label();
             this.btn_Statements = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Types = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Environments = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pb_Menu = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UserImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Menu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lb_Minimize);
+            this.panel1.Controls.Add(this.lb_Close);
             this.panel1.Location = new System.Drawing.Point(199, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
@@ -64,12 +64,12 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
+            this.bunifuGradientPanel1.Controls.Add(this.pb_Menu);
             this.bunifuGradientPanel1.Controls.Add(this.btn_Environments);
             this.bunifuGradientPanel1.Controls.Add(this.btn_Types);
             this.bunifuGradientPanel1.Controls.Add(this.btn_Statements);
             this.bunifuGradientPanel1.Controls.Add(this.lb_logo);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.pb_UserImage);
             this.bunifuGradientPanel1.Controls.Add(this.btn_about);
             this.bunifuGradientPanel1.Controls.Add(this.btn_Goals);
             this.bunifuGradientPanel1.Controls.Add(this.btn_Investments);
@@ -228,33 +228,33 @@
             this.btn_Dashboard.Textcolor = System.Drawing.Color.White;
             this.btn_Dashboard.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // label1
+            // lb_Close
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(725, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 22);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "X";
+            this.lb_Close.AutoSize = true;
+            this.lb_Close.Location = new System.Drawing.Point(725, 8);
+            this.lb_Close.Name = "lb_Close";
+            this.lb_Close.Size = new System.Drawing.Size(22, 22);
+            this.lb_Close.TabIndex = 13;
+            this.lb_Close.Text = "X";
             // 
-            // label2
+            // lb_Minimize
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(699, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 23);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "_";
+            this.lb_Minimize.AutoSize = true;
+            this.lb_Minimize.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Minimize.Location = new System.Drawing.Point(699, 6);
+            this.lb_Minimize.Name = "lb_Minimize";
+            this.lb_Minimize.Size = new System.Drawing.Size(20, 23);
+            this.lb_Minimize.TabIndex = 13;
+            this.lb_Minimize.Text = "_";
             // 
-            // pictureBox1
+            // pb_UserImage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 133);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pb_UserImage.BackColor = System.Drawing.Color.Transparent;
+            this.pb_UserImage.Location = new System.Drawing.Point(24, 80);
+            this.pb_UserImage.Name = "pb_UserImage";
+            this.pb_UserImage.Size = new System.Drawing.Size(140, 133);
+            this.pb_UserImage.TabIndex = 6;
+            this.pb_UserImage.TabStop = false;
             // 
             // lb_logo
             // 
@@ -375,16 +375,16 @@
             this.btn_Environments.Textcolor = System.Drawing.Color.White;
             this.btn_Environments.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // pictureBox2
+            // pb_Menu
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::statements_control.Properties.Resources.menu;
-            this.pictureBox2.Location = new System.Drawing.Point(163, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
+            this.pb_Menu.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Menu.Image = global::statements_control.Properties.Resources.menu;
+            this.pb_Menu.Location = new System.Drawing.Point(163, 169);
+            this.pb_Menu.Name = "pb_Menu";
+            this.pb_Menu.Size = new System.Drawing.Size(30, 44);
+            this.pb_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Menu.TabIndex = 13;
+            this.pb_Menu.TabStop = false;
             // 
             // fr_Default
             // 
@@ -405,8 +405,8 @@
             this.panel1.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UserImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Menu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,14 +417,14 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_about;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Investments;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Dashboard;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_Minimize;
+        private System.Windows.Forms.Label lb_Close;
         private System.Windows.Forms.Label lb_logo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_UserImage;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Environments;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Types;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Statements;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Goals;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pb_Menu;
     }
 }
