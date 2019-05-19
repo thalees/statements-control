@@ -29,295 +29,362 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fr_Default));
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.btn_about = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Goals = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Investments = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Dashboard = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_logo = new System.Windows.Forms.Label();
+            this.btn_Statements = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Types = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Environments = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(735, 362);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(193, 189);
-            this.panel5.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 22);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "User_control";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(520, 362);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(193, 189);
-            this.panel4.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 22);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "User_control";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(520, 161);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(408, 184);
-            this.panel3.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(156, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 22);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "User_control";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(232, 161);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(266, 390);
-            this.panel2.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "User_control";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(240, 99);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Este é o seu dashboard :)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(228, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 33);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Bem-vind@ !";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(199, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 40);
+            this.panel1.Size = new System.Drawing.Size(762, 40);
             this.panel1.TabIndex = 5;
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton4);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton3);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton2);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton1);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_Environments);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_Types);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_Statements);
+            this.bunifuGradientPanel1.Controls.Add(this.lb_logo);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_about);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_Goals);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_Investments);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_Dashboard);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.SystemColors.ControlLight;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.CornflowerBlue;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Cyan;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Cyan;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 2);
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Aqua;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Aqua;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(200, 578);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(200, 581);
             this.bunifuGradientPanel1.TabIndex = 12;
             // 
-            // bunifuFlatButton4
+            // btn_about
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Sobre";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(1, 533);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(199, 40);
-            this.bunifuFlatButton4.TabIndex = 4;
-            this.bunifuFlatButton4.Text = "Sobre";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_about.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_about.BackColor = System.Drawing.Color.Transparent;
+            this.btn_about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_about.BorderRadius = 0;
+            this.btn_about.ButtonText = "Sobre";
+            this.btn_about.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_about.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_about.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_about.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_about.Iconimage")));
+            this.btn_about.Iconimage_right = null;
+            this.btn_about.Iconimage_right_Selected = null;
+            this.btn_about.Iconimage_Selected = null;
+            this.btn_about.IconMarginLeft = 0;
+            this.btn_about.IconMarginRight = 0;
+            this.btn_about.IconRightVisible = true;
+            this.btn_about.IconRightZoom = 0D;
+            this.btn_about.IconVisible = true;
+            this.btn_about.IconZoom = 90D;
+            this.btn_about.IsTab = false;
+            this.btn_about.Location = new System.Drawing.Point(1, 537);
+            this.btn_about.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_about.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_about.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_about.selected = false;
+            this.btn_about.Size = new System.Drawing.Size(199, 40);
+            this.btn_about.TabIndex = 4;
+            this.btn_about.Text = "Sobre";
+            this.btn_about.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_about.Textcolor = System.Drawing.Color.White;
+            this.btn_about.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton3
+            // btn_Goals
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Metas";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(1, 303);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(199, 40);
-            this.bunifuFlatButton3.TabIndex = 5;
-            this.bunifuFlatButton3.Text = "Metas";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Goals.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Goals.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Goals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Goals.BorderRadius = 0;
+            this.btn_Goals.ButtonText = "Metas";
+            this.btn_Goals.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Goals.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Goals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Goals.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Goals.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Goals.Iconimage")));
+            this.btn_Goals.Iconimage_right = null;
+            this.btn_Goals.Iconimage_right_Selected = null;
+            this.btn_Goals.Iconimage_Selected = null;
+            this.btn_Goals.IconMarginLeft = 0;
+            this.btn_Goals.IconMarginRight = 0;
+            this.btn_Goals.IconRightVisible = true;
+            this.btn_Goals.IconRightZoom = 0D;
+            this.btn_Goals.IconVisible = true;
+            this.btn_Goals.IconZoom = 90D;
+            this.btn_Goals.IsTab = false;
+            this.btn_Goals.Location = new System.Drawing.Point(1, 303);
+            this.btn_Goals.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Goals.Name = "btn_Goals";
+            this.btn_Goals.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Goals.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Goals.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Goals.selected = false;
+            this.btn_Goals.Size = new System.Drawing.Size(199, 40);
+            this.btn_Goals.TabIndex = 5;
+            this.btn_Goals.Text = "Metas";
+            this.btn_Goals.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Goals.Textcolor = System.Drawing.Color.White;
+            this.btn_Goals.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton2
+            // btn_Investments
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Investimentos";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(1, 262);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(199, 40);
-            this.bunifuFlatButton2.TabIndex = 2;
-            this.bunifuFlatButton2.Text = "Investimentos";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Investments.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Investments.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Investments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Investments.BorderRadius = 0;
+            this.btn_Investments.ButtonText = "Investimentos";
+            this.btn_Investments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Investments.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Investments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Investments.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Investments.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Investments.Iconimage")));
+            this.btn_Investments.Iconimage_right = null;
+            this.btn_Investments.Iconimage_right_Selected = null;
+            this.btn_Investments.Iconimage_Selected = null;
+            this.btn_Investments.IconMarginLeft = 0;
+            this.btn_Investments.IconMarginRight = 0;
+            this.btn_Investments.IconRightVisible = true;
+            this.btn_Investments.IconRightZoom = 0D;
+            this.btn_Investments.IconVisible = true;
+            this.btn_Investments.IconZoom = 90D;
+            this.btn_Investments.IsTab = false;
+            this.btn_Investments.Location = new System.Drawing.Point(1, 262);
+            this.btn_Investments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Investments.Name = "btn_Investments";
+            this.btn_Investments.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Investments.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Investments.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Investments.selected = false;
+            this.btn_Investments.Size = new System.Drawing.Size(199, 40);
+            this.btn_Investments.TabIndex = 2;
+            this.btn_Investments.Text = "Investimentos";
+            this.btn_Investments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Investments.Textcolor = System.Drawing.Color.White;
+            this.btn_Investments.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton1
+            // btn_Dashboard
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Dashboard";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(1, 221);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(199, 40);
-            this.bunifuFlatButton1.TabIndex = 3;
-            this.bunifuFlatButton1.Text = "Dashboard";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Dashboard.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Dashboard.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Dashboard.BorderRadius = 0;
+            this.btn_Dashboard.ButtonText = "Dashboard";
+            this.btn_Dashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Dashboard.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Dashboard.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Dashboard.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Dashboard.Iconimage")));
+            this.btn_Dashboard.Iconimage_right = null;
+            this.btn_Dashboard.Iconimage_right_Selected = null;
+            this.btn_Dashboard.Iconimage_Selected = null;
+            this.btn_Dashboard.IconMarginLeft = 0;
+            this.btn_Dashboard.IconMarginRight = 0;
+            this.btn_Dashboard.IconRightVisible = true;
+            this.btn_Dashboard.IconRightZoom = 0D;
+            this.btn_Dashboard.IconVisible = true;
+            this.btn_Dashboard.IconZoom = 90D;
+            this.btn_Dashboard.IsTab = false;
+            this.btn_Dashboard.Location = new System.Drawing.Point(1, 221);
+            this.btn_Dashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Dashboard.Name = "btn_Dashboard";
+            this.btn_Dashboard.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Dashboard.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Dashboard.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Dashboard.selected = false;
+            this.btn_Dashboard.Size = new System.Drawing.Size(199, 40);
+            this.btn_Dashboard.TabIndex = 3;
+            this.btn_Dashboard.Text = "Dashboard";
+            this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Dashboard.Textcolor = System.Drawing.Color.White;
+            this.btn_Dashboard.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(725, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "X";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(699, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 23);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "_";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 133);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lb_logo
+            // 
+            this.lb_logo.AutoSize = true;
+            this.lb_logo.BackColor = System.Drawing.Color.Transparent;
+            this.lb_logo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_logo.Location = new System.Drawing.Point(8, 9);
+            this.lb_logo.Name = "lb_logo";
+            this.lb_logo.Size = new System.Drawing.Size(188, 23);
+            this.lb_logo.TabIndex = 7;
+            this.lb_logo.Text = "StatementsControl";
+            // 
+            // btn_Statements
+            // 
+            this.btn_Statements.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Statements.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Statements.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Statements.BorderRadius = 0;
+            this.btn_Statements.ButtonText = "Gastos e Lucros";
+            this.btn_Statements.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Statements.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Statements.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Statements.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Statements.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Statements.Iconimage")));
+            this.btn_Statements.Iconimage_right = null;
+            this.btn_Statements.Iconimage_right_Selected = null;
+            this.btn_Statements.Iconimage_Selected = null;
+            this.btn_Statements.IconMarginLeft = 0;
+            this.btn_Statements.IconMarginRight = 0;
+            this.btn_Statements.IconRightVisible = true;
+            this.btn_Statements.IconRightZoom = 0D;
+            this.btn_Statements.IconVisible = true;
+            this.btn_Statements.IconZoom = 90D;
+            this.btn_Statements.IsTab = false;
+            this.btn_Statements.Location = new System.Drawing.Point(1, 342);
+            this.btn_Statements.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Statements.Name = "btn_Statements";
+            this.btn_Statements.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Statements.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Statements.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Statements.selected = false;
+            this.btn_Statements.Size = new System.Drawing.Size(199, 40);
+            this.btn_Statements.TabIndex = 13;
+            this.btn_Statements.Text = "Gastos e Lucros";
+            this.btn_Statements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Statements.Textcolor = System.Drawing.Color.White;
+            this.btn_Statements.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btn_Types
+            // 
+            this.btn_Types.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Types.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Types.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Types.BorderRadius = 0;
+            this.btn_Types.ButtonText = "Tipos";
+            this.btn_Types.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Types.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Types.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Types.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Types.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Types.Iconimage")));
+            this.btn_Types.Iconimage_right = null;
+            this.btn_Types.Iconimage_right_Selected = null;
+            this.btn_Types.Iconimage_Selected = null;
+            this.btn_Types.IconMarginLeft = 0;
+            this.btn_Types.IconMarginRight = 0;
+            this.btn_Types.IconRightVisible = true;
+            this.btn_Types.IconRightZoom = 0D;
+            this.btn_Types.IconVisible = true;
+            this.btn_Types.IconZoom = 90D;
+            this.btn_Types.IsTab = false;
+            this.btn_Types.Location = new System.Drawing.Point(1, 381);
+            this.btn_Types.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Types.Name = "btn_Types";
+            this.btn_Types.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Types.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Types.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Types.selected = false;
+            this.btn_Types.Size = new System.Drawing.Size(199, 40);
+            this.btn_Types.TabIndex = 14;
+            this.btn_Types.Text = "Tipos";
+            this.btn_Types.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Types.Textcolor = System.Drawing.Color.White;
+            this.btn_Types.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btn_Environments
+            // 
+            this.btn_Environments.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Environments.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Environments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Environments.BorderRadius = 0;
+            this.btn_Environments.ButtonText = "Ambientes";
+            this.btn_Environments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Environments.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Environments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Environments.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Environments.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Environments.Iconimage")));
+            this.btn_Environments.Iconimage_right = null;
+            this.btn_Environments.Iconimage_right_Selected = null;
+            this.btn_Environments.Iconimage_Selected = null;
+            this.btn_Environments.IconMarginLeft = 0;
+            this.btn_Environments.IconMarginRight = 0;
+            this.btn_Environments.IconRightVisible = true;
+            this.btn_Environments.IconRightZoom = 0D;
+            this.btn_Environments.IconVisible = true;
+            this.btn_Environments.IconZoom = 90D;
+            this.btn_Environments.IsTab = false;
+            this.btn_Environments.Location = new System.Drawing.Point(1, 418);
+            this.btn_Environments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Environments.Name = "btn_Environments";
+            this.btn_Environments.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Environments.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Environments.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Environments.selected = false;
+            this.btn_Environments.Size = new System.Drawing.Size(199, 40);
+            this.btn_Environments.TabIndex = 14;
+            this.btn_Environments.Text = "Ambientes";
+            this.btn_Environments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Environments.Textcolor = System.Drawing.Color.White;
+            this.btn_Environments.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::statements_control.Properties.Resources.menu;
+            this.pictureBox2.Location = new System.Drawing.Point(163, 169);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
             // fr_Default
             // 
@@ -326,12 +393,6 @@
             this.ClientSize = new System.Drawing.Size(960, 580);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -340,37 +401,30 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fr_Dashboard";
             this.Load += new System.EventHandler(this.fr_Dashboard_Load);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_about;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Investments;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Dashboard;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_logo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Environments;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Types;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Statements;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Goals;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
