@@ -12,12 +12,12 @@ namespace Library.VOs
         private int typeId;
         private int environmentId;
         private double value;
-        private DateTime data;
+        private DateTime date;
 
         public int UserId { get => userId; set => userId = value; }
         public int TypeId { get => typeId; set => typeId = value; }
         public int EnvironmentId { get => environmentId; set => environmentId = value; }
         public double Value { get => value; set => this.value = value; }
-        public DateTime Data { get => data; set => data = value; }
+        public DateTime Date { get => date; set => date = value; }
     }
 }
