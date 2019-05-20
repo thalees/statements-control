@@ -33,12 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>dependencies\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fr_Dashboard.cs">
+    <Compile Include="fr_Default.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fr_Dashboard.Designer.cs">
-      <DependentUpon>fr_Dashboard.cs</DependentUpon>
+    <Compile Include="fr_Default.Designer.cs">
+      <DependentUpon>fr_Default.cs</DependentUpon>
     </Compile>
     <Compile Include="fr_Login.cs">
       <SubType>Form</SubType>
@@ -65,8 +65,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fr_Dashboard.resx">
-      <DependentUpon>fr_Dashboard.cs</DependentUpon>
+    <Compile Include="uc_About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_About.Designer.cs">
+      <DependentUpon>uc_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Dashboard.Designer.cs">
+      <DependentUpon>uc_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_DefaultRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_DefaultRegister.Designer.cs">
+      <DependentUpon>uc_DefaultRegister.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fr_Default.resx">
+      <DependentUpon>fr_Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fr_Login.resx">
       <DependentUpon>fr_Login.cs</DependentUpon>
@@ -79,7 +97,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="uc_About.resx">
+      <DependentUpon>uc_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Dashboard.resx">
+      <DependentUpon>uc_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_DefaultRegister.resx">
+      <DependentUpon>uc_DefaultRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
