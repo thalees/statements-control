@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fr_Default));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_Minimize = new System.Windows.Forms.Label();
+            this.lb_Close = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pb_Menu = new System.Windows.Forms.PictureBox();
+            this.btn_Environments = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Types = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Statements = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lb_logo = new System.Windows.Forms.Label();
+            this.pb_UserImage = new System.Windows.Forms.PictureBox();
             this.btn_about = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Goals = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Investments = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Dashboard = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lb_Close = new System.Windows.Forms.Label();
-            this.lb_Minimize = new System.Windows.Forms.Label();
-            this.pb_UserImage = new System.Windows.Forms.PictureBox();
-            this.lb_logo = new System.Windows.Forms.Label();
-            this.btn_Statements = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Types = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Environments = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pb_Menu = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_UserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,6 +59,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(762, 40);
             this.panel1.TabIndex = 5;
+            // 
+            // lb_Minimize
+            // 
+            this.lb_Minimize.AutoSize = true;
+            this.lb_Minimize.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Minimize.Location = new System.Drawing.Point(699, 6);
+            this.lb_Minimize.Name = "lb_Minimize";
+            this.lb_Minimize.Size = new System.Drawing.Size(16, 18);
+            this.lb_Minimize.TabIndex = 13;
+            this.lb_Minimize.Text = "_";
+            // 
+            // lb_Close
+            // 
+            this.lb_Close.AutoSize = true;
+            this.lb_Close.Location = new System.Drawing.Point(725, 8);
+            this.lb_Close.Name = "lb_Close";
+            this.lb_Close.Size = new System.Drawing.Size(18, 20);
+            this.lb_Close.TabIndex = 13;
+            this.lb_Close.Text = "X";
             // 
             // bunifuGradientPanel1
             // 
@@ -83,6 +102,145 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(200, 581);
             this.bunifuGradientPanel1.TabIndex = 12;
+            // 
+            // pb_Menu
+            // 
+            this.pb_Menu.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Menu.Image = global::statements_control.Properties.Resources.menu;
+            this.pb_Menu.Location = new System.Drawing.Point(163, 169);
+            this.pb_Menu.Name = "pb_Menu";
+            this.pb_Menu.Size = new System.Drawing.Size(30, 44);
+            this.pb_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Menu.TabIndex = 13;
+            this.pb_Menu.TabStop = false;
+            // 
+            // btn_Environments
+            // 
+            this.btn_Environments.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Environments.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Environments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Environments.BorderRadius = 0;
+            this.btn_Environments.ButtonText = "Ambientes";
+            this.btn_Environments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Environments.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Environments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Environments.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Environments.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Environments.Iconimage")));
+            this.btn_Environments.Iconimage_right = null;
+            this.btn_Environments.Iconimage_right_Selected = null;
+            this.btn_Environments.Iconimage_Selected = null;
+            this.btn_Environments.IconMarginLeft = 0;
+            this.btn_Environments.IconMarginRight = 0;
+            this.btn_Environments.IconRightVisible = true;
+            this.btn_Environments.IconRightZoom = 0D;
+            this.btn_Environments.IconVisible = true;
+            this.btn_Environments.IconZoom = 90D;
+            this.btn_Environments.IsTab = false;
+            this.btn_Environments.Location = new System.Drawing.Point(1, 418);
+            this.btn_Environments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Environments.Name = "btn_Environments";
+            this.btn_Environments.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Environments.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Environments.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Environments.selected = false;
+            this.btn_Environments.Size = new System.Drawing.Size(199, 40);
+            this.btn_Environments.TabIndex = 14;
+            this.btn_Environments.Text = "Ambientes";
+            this.btn_Environments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Environments.Textcolor = System.Drawing.Color.White;
+            this.btn_Environments.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btn_Types
+            // 
+            this.btn_Types.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Types.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Types.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Types.BorderRadius = 0;
+            this.btn_Types.ButtonText = "Tipos";
+            this.btn_Types.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Types.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Types.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Types.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Types.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Types.Iconimage")));
+            this.btn_Types.Iconimage_right = null;
+            this.btn_Types.Iconimage_right_Selected = null;
+            this.btn_Types.Iconimage_Selected = null;
+            this.btn_Types.IconMarginLeft = 0;
+            this.btn_Types.IconMarginRight = 0;
+            this.btn_Types.IconRightVisible = true;
+            this.btn_Types.IconRightZoom = 0D;
+            this.btn_Types.IconVisible = true;
+            this.btn_Types.IconZoom = 90D;
+            this.btn_Types.IsTab = false;
+            this.btn_Types.Location = new System.Drawing.Point(1, 381);
+            this.btn_Types.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Types.Name = "btn_Types";
+            this.btn_Types.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Types.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Types.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Types.selected = false;
+            this.btn_Types.Size = new System.Drawing.Size(199, 40);
+            this.btn_Types.TabIndex = 14;
+            this.btn_Types.Text = "Tipos";
+            this.btn_Types.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Types.Textcolor = System.Drawing.Color.White;
+            this.btn_Types.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btn_Statements
+            // 
+            this.btn_Statements.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Statements.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Statements.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Statements.BorderRadius = 0;
+            this.btn_Statements.ButtonText = "Gastos e Lucros";
+            this.btn_Statements.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Statements.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Statements.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Statements.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Statements.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Statements.Iconimage")));
+            this.btn_Statements.Iconimage_right = null;
+            this.btn_Statements.Iconimage_right_Selected = null;
+            this.btn_Statements.Iconimage_Selected = null;
+            this.btn_Statements.IconMarginLeft = 0;
+            this.btn_Statements.IconMarginRight = 0;
+            this.btn_Statements.IconRightVisible = true;
+            this.btn_Statements.IconRightZoom = 0D;
+            this.btn_Statements.IconVisible = true;
+            this.btn_Statements.IconZoom = 90D;
+            this.btn_Statements.IsTab = false;
+            this.btn_Statements.Location = new System.Drawing.Point(1, 342);
+            this.btn_Statements.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Statements.Name = "btn_Statements";
+            this.btn_Statements.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Statements.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_Statements.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_Statements.selected = false;
+            this.btn_Statements.Size = new System.Drawing.Size(199, 40);
+            this.btn_Statements.TabIndex = 13;
+            this.btn_Statements.Text = "Gastos e Lucros";
+            this.btn_Statements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Statements.Textcolor = System.Drawing.Color.White;
+            this.btn_Statements.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // lb_logo
+            // 
+            this.lb_logo.AutoSize = true;
+            this.lb_logo.BackColor = System.Drawing.Color.Transparent;
+            this.lb_logo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_logo.Location = new System.Drawing.Point(8, 9);
+            this.lb_logo.Name = "lb_logo";
+            this.lb_logo.Size = new System.Drawing.Size(147, 19);
+            this.lb_logo.TabIndex = 7;
+            this.lb_logo.Text = "StatementsControl";
+            // 
+            // pb_UserImage
+            // 
+            this.pb_UserImage.BackColor = System.Drawing.Color.Transparent;
+            this.pb_UserImage.Location = new System.Drawing.Point(24, 80);
+            this.pb_UserImage.Name = "pb_UserImage";
+            this.pb_UserImage.Size = new System.Drawing.Size(140, 133);
+            this.pb_UserImage.TabIndex = 6;
+            this.pb_UserImage.TabStop = false;
             // 
             // btn_about
             // 
@@ -228,167 +386,9 @@
             this.btn_Dashboard.Textcolor = System.Drawing.Color.White;
             this.btn_Dashboard.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // lb_Close
-            // 
-            this.lb_Close.AutoSize = true;
-            this.lb_Close.Location = new System.Drawing.Point(725, 8);
-            this.lb_Close.Name = "lb_Close";
-            this.lb_Close.Size = new System.Drawing.Size(22, 22);
-            this.lb_Close.TabIndex = 13;
-            this.lb_Close.Text = "X";
-            // 
-            // lb_Minimize
-            // 
-            this.lb_Minimize.AutoSize = true;
-            this.lb_Minimize.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Minimize.Location = new System.Drawing.Point(699, 6);
-            this.lb_Minimize.Name = "lb_Minimize";
-            this.lb_Minimize.Size = new System.Drawing.Size(20, 23);
-            this.lb_Minimize.TabIndex = 13;
-            this.lb_Minimize.Text = "_";
-            // 
-            // pb_UserImage
-            // 
-            this.pb_UserImage.BackColor = System.Drawing.Color.Transparent;
-            this.pb_UserImage.Location = new System.Drawing.Point(24, 80);
-            this.pb_UserImage.Name = "pb_UserImage";
-            this.pb_UserImage.Size = new System.Drawing.Size(140, 133);
-            this.pb_UserImage.TabIndex = 6;
-            this.pb_UserImage.TabStop = false;
-            // 
-            // lb_logo
-            // 
-            this.lb_logo.AutoSize = true;
-            this.lb_logo.BackColor = System.Drawing.Color.Transparent;
-            this.lb_logo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_logo.Location = new System.Drawing.Point(8, 9);
-            this.lb_logo.Name = "lb_logo";
-            this.lb_logo.Size = new System.Drawing.Size(188, 23);
-            this.lb_logo.TabIndex = 7;
-            this.lb_logo.Text = "StatementsControl";
-            // 
-            // btn_Statements
-            // 
-            this.btn_Statements.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Statements.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Statements.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Statements.BorderRadius = 0;
-            this.btn_Statements.ButtonText = "Gastos e Lucros";
-            this.btn_Statements.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Statements.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Statements.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Statements.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Statements.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Statements.Iconimage")));
-            this.btn_Statements.Iconimage_right = null;
-            this.btn_Statements.Iconimage_right_Selected = null;
-            this.btn_Statements.Iconimage_Selected = null;
-            this.btn_Statements.IconMarginLeft = 0;
-            this.btn_Statements.IconMarginRight = 0;
-            this.btn_Statements.IconRightVisible = true;
-            this.btn_Statements.IconRightZoom = 0D;
-            this.btn_Statements.IconVisible = true;
-            this.btn_Statements.IconZoom = 90D;
-            this.btn_Statements.IsTab = false;
-            this.btn_Statements.Location = new System.Drawing.Point(1, 342);
-            this.btn_Statements.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_Statements.Name = "btn_Statements";
-            this.btn_Statements.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_Statements.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_Statements.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_Statements.selected = false;
-            this.btn_Statements.Size = new System.Drawing.Size(199, 40);
-            this.btn_Statements.TabIndex = 13;
-            this.btn_Statements.Text = "Gastos e Lucros";
-            this.btn_Statements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Statements.Textcolor = System.Drawing.Color.White;
-            this.btn_Statements.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btn_Types
-            // 
-            this.btn_Types.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Types.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Types.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Types.BorderRadius = 0;
-            this.btn_Types.ButtonText = "Tipos";
-            this.btn_Types.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Types.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Types.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Types.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Types.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Types.Iconimage")));
-            this.btn_Types.Iconimage_right = null;
-            this.btn_Types.Iconimage_right_Selected = null;
-            this.btn_Types.Iconimage_Selected = null;
-            this.btn_Types.IconMarginLeft = 0;
-            this.btn_Types.IconMarginRight = 0;
-            this.btn_Types.IconRightVisible = true;
-            this.btn_Types.IconRightZoom = 0D;
-            this.btn_Types.IconVisible = true;
-            this.btn_Types.IconZoom = 90D;
-            this.btn_Types.IsTab = false;
-            this.btn_Types.Location = new System.Drawing.Point(1, 381);
-            this.btn_Types.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_Types.Name = "btn_Types";
-            this.btn_Types.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_Types.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_Types.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_Types.selected = false;
-            this.btn_Types.Size = new System.Drawing.Size(199, 40);
-            this.btn_Types.TabIndex = 14;
-            this.btn_Types.Text = "Tipos";
-            this.btn_Types.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Types.Textcolor = System.Drawing.Color.White;
-            this.btn_Types.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btn_Environments
-            // 
-            this.btn_Environments.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Environments.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Environments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Environments.BorderRadius = 0;
-            this.btn_Environments.ButtonText = "Ambientes";
-            this.btn_Environments.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Environments.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Environments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Environments.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Environments.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Environments.Iconimage")));
-            this.btn_Environments.Iconimage_right = null;
-            this.btn_Environments.Iconimage_right_Selected = null;
-            this.btn_Environments.Iconimage_Selected = null;
-            this.btn_Environments.IconMarginLeft = 0;
-            this.btn_Environments.IconMarginRight = 0;
-            this.btn_Environments.IconRightVisible = true;
-            this.btn_Environments.IconRightZoom = 0D;
-            this.btn_Environments.IconVisible = true;
-            this.btn_Environments.IconZoom = 90D;
-            this.btn_Environments.IsTab = false;
-            this.btn_Environments.Location = new System.Drawing.Point(1, 418);
-            this.btn_Environments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_Environments.Name = "btn_Environments";
-            this.btn_Environments.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_Environments.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btn_Environments.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_Environments.selected = false;
-            this.btn_Environments.Size = new System.Drawing.Size(199, 40);
-            this.btn_Environments.TabIndex = 14;
-            this.btn_Environments.Text = "Ambientes";
-            this.btn_Environments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Environments.Textcolor = System.Drawing.Color.White;
-            this.btn_Environments.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // pb_Menu
-            // 
-            this.pb_Menu.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Menu.Image = global::statements_control.Properties.Resources.menu;
-            this.pb_Menu.Location = new System.Drawing.Point(163, 169);
-            this.pb_Menu.Name = "pb_Menu";
-            this.pb_Menu.Size = new System.Drawing.Size(30, 44);
-            this.pb_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_Menu.TabIndex = 13;
-            this.pb_Menu.TabStop = false;
-            // 
             // fr_Default
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 580);
             this.Controls.Add(this.panel1);
@@ -405,8 +405,8 @@
             this.panel1.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_UserImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UserImage)).EndInit();
             this.ResumeLayout(false);
 
         }
