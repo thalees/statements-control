@@ -15,18 +15,20 @@ namespace Library.DAOs
         //protected string table { get; set; }
         //protected string key { get; set; } = "id";
 
-        protected abstract string SQLInsert();
-        protected abstract string SQLUpdate();
-        protected abstract string SQLDelete();
-        protected abstract string SQLSearch();
+        protected abstract void SQLInsert(MasterVO vo);
+        protected abstract void SQLUpdate(MasterVO vo);
+        protected abstract void SQLDelete(int primaryKey);
+        protected abstract DataTable SQLSearch(MasterVO vo);
 
-        protected abstract string SQLFirst();
-        protected abstract string SQLLast();
-        protected abstract string SQLNext();
-        protected abstract string SQLPrevious();
+        protected abstract MasterVO SQLFirst();
+        protected abstract MasterVO SQLLast();
+        protected abstract MasterVO SQLNext(int primaryKey);
+        protected abstract MasterVO SQLPrevious(int primaryKey);
 
         protected abstract SqlParameter[] CreateParameters(MasterVO vo);
         protected abstract MasterVO BiuldVO(DataRow row);
+
+        protected abstract MasterVO ObjectOrNull(DataTable table);
     }
 
 }
