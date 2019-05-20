@@ -83,6 +83,12 @@
     <Compile Include="uc_DefaultRegister.Designer.cs">
       <DependentUpon>uc_DefaultRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_TypesRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_TypesRegister.Designer.cs">
+      <DependentUpon>uc_TypesRegister.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fr_Default.resx">
       <DependentUpon>fr_Default.cs</DependentUpon>
     </EmbeddedResource>
