@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Library.VOs
 {
-    class GoalsVO
+    class GoalsVO : MasterVO
     {
         private string name;
         private DateTime endDate;
-        private int idUser;
+        private int userId;
 
         public string Name { get => name; set => name = value; }
-        public int IdUser { get => idUser; set => idUser = value; }
+        public int UserId { get => userId; set => userId = value; }
         public DateTime EndDate { get => endDate; set => endDate = value; }
     }
 }
