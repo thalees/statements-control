@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Stored Procedures\" />
+    <Folder Include="Triggers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
