@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Investments] (
 	 [id] INT NOT NULL PRIMARY KEY IDENTITY (1,1),
 	 [userId] INT NOT NULL,
 	 [name] VARCHAR (20) NOT NULL,
-	 [value] DECIMAL NOT NULL,
+	 [value] DECIMAL(18, 2) NOT NULL,
 	 [startDate] SMALLDATETIME NOT NULL,
 	 [endDate] SMALLDATETIME NOT NULL
 )
@@ -18,7 +18,7 @@ GO
 CREATE TABLE [dbo].[Goals] (
 	 [id] INT NOT NULL PRIMARY KEY IDENTITY (1,1),
 	 [userId] INT NOT NULL,
-	 [value] DECIMAL NOT NULL,
+	 [value] DECIMAL(18, 2) NOT NULL,
 	 [name] VARCHAR (100) NOT NULL,
 	 [endDate]	SMALLDATETIME NOT NULL
 )
@@ -39,7 +39,7 @@ CREATE TABLE [dbo].[Statements] (
 	 [typeId] INT NOT NULL,
 	 [environmentId] INT NOT NULL,
 	 [name] VARCHAR (50) NOT NULL,
-	 [value] DECIMAL NOT NULL,
+	 [value] DECIMAL(18, 2) NOT NULL,
 	 [date] SMALLDATETIME NOT NULL
 )
 GO

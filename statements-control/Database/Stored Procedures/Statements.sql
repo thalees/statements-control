@@ -1,4 +1,5 @@
-
+USE [StatementsControl]
+GO
 
 -- Insert
 CREATE PROCEDURE usp_InsertStatement(
@@ -6,7 +7,7 @@ CREATE PROCEDURE usp_InsertStatement(
 	@typeId INT,
 	@environmentId INT,
 	@name VARCHAR(50),
-	@value DECIMAL,
+	@value DECIMAL(18, 2),
 	@date SMALLDATETIME
 )
 AS
@@ -29,7 +30,7 @@ CREATE PROCEDURE usp_UpdateStatement(
 	@typeId INT,
 	@environmentId INT,
 	@name VARCHAR(50),
-	@value DECIMAL,
+	@value DECIMAL(18, 2),
 	@date SMALLDATETIME
 )
 AS
@@ -96,6 +97,15 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE usp_FilterStatementsByType(
+	@typeId INT
+)
+AS
+BEGIN
+	SELECT SUM([statements].[value]) total FROM [Statements] [statements] WHERE [statements].typeId = @typeId
+END
+GO
+
 CREATE PROCEDURE usp_FilterStatementsByDate(
 	@startDate SMALLDATETIME,
 	@endDate SMALLDATETIME
@@ -104,14 +114,5 @@ AS
 BEGIN
 	SELECT * FROM [Statements] [statements] 
 	WHERE [statements].[date] BETWEEN @startDate AND @endDate
-END
-GO
-
-CREATE PROCEDURE usp_FilterStatementsByType(
-	@typeId INT
-)
-AS
-BEGIN
-	SELECT SUM([statements].[value]) total FROM [Statements] [statements] WHERE [statements].typeId = @typeId
 END
 GO

@@ -1,4 +1,5 @@
-
+USE [StatementsControl]
+GO
 
 -- Insert
 CREATE PROCEDURE usp_InsertEnvironment(

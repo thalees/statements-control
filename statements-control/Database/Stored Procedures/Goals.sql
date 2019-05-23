@@ -1,10 +1,11 @@
-
+USE [StatementsControl]
+GO
 
 -- Insert
 CREATE PROCEDURE usp_InsertGoal(
     @userId INT,
     @name VARCHAR(20), 
-    @value DECIMAL,
+    @value DECIMAL(18, 2),
     @endDate SMALLDATETIME
 )
 AS
@@ -25,7 +26,7 @@ CREATE PROCEDURE usp_UpdateGoal(
 	@id INT,
     @userId INT,
     @name VARCHAR(20), 
-    @value DECIMAL, 
+    @value DECIMAL(18, 2), 
     @endDate SMALLDATETIME
 )
 AS
@@ -64,7 +65,7 @@ CREATE PROCEDURE usp_ListAllGoals (
 ) 
 AS
 BEGIN
-	SELECT [goals].[id], [goals].[name], [goals].[time]
+	SELECT [goals].[id], [goals].[name], [goals].[endDate]
 	FROM [Goals] [goals] WHERE [goals].[userId] = @userId
 END
 GO
@@ -90,8 +91,8 @@ END
 GO
 
 CREATE PROCEDURE usp_FilterGoalsByValue(
-	@minValue DECIMAL,
-	@maxValue DECIMAL
+	@minValue DECIMAL(18, 2),
+	@maxValue DECIMAL(18, 2)
 )
 AS
 BEGIN

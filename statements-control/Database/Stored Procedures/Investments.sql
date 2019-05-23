@@ -1,10 +1,10 @@
-
-
+USE [StatementsControl]
+GO
 -- Insert
 CREATE PROCEDURE usp_InsertInvestment(
     @userId INT,
     @name VARCHAR(20), 
-    @value DECIMAL, 
+    @value DECIMAL(18, 2), 
     @startDate SMALLDATETIME,
 	@endDate SMALLDATETIME
 )
@@ -26,7 +26,7 @@ CREATE PROCEDURE usp_UpdateInvestment(
 	@id INT,
     @userId INT,
     @name VARCHAR(20), 
-    @value DECIMAL, 
+    @value DECIMAL(18, 2), 
     @startDate SMALLDATETIME,
 	@endDate SMALLDATETIME
 )
@@ -96,8 +96,8 @@ END
 GO
 
 CREATE PROCEDURE usp_FilterInvestmentsByValue(
-	@minValue DECIMAL,
-	@maxValue DECIMAL
+	@minValue DECIMAL(18, 2),
+	@maxValue DECIMAL(18, 2)
 )
 AS
 BEGIN
