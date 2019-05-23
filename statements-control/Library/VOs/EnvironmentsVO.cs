@@ -8,8 +8,8 @@ namespace Library.VOs
 {
     public class EnvironmentsVO : MasterVO
     {
-        private string name;
+        private string description;
 
-        public string Name { get => name; set => name = value; }
+        public string Description { get => description; set => description = value; }
     }
 }
