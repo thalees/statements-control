@@ -64,3 +64,54 @@ BEGIN
 	END CATCH
 END
 GO
+
+--------------------------------------------------------------------
+
+CREATE PROCEDURE usp_ListAllStatements (
+	@userId INT
+)
+AS
+BEGIN
+	SELECT [statements].[id], [statements].[name], [statements].[date], [statements].[value]
+	FROM [Statements] [statements] WHERE [statements].userId = @userId
+END
+GO
+
+CREATE PROCEDURE usp_FilterStatementsByName(
+	@name VARCHAR(20)
+)
+AS
+BEGIN
+	DECLARE @nameLowercase VARCHAR(20) = LOWER(@name)
+	SELECT * FROM [Statements] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
+END
+GO
+
+CREATE PROCEDURE usp_FilterStatementsByEnvironment(
+	@environmentId INT
+)
+AS
+BEGIN
+	SELECT SUM([statements].[value]) total FROM [Statements] [statements] WHERE [statements].environmentId = @environmentId
+END
+GO
+
+CREATE PROCEDURE usp_FilterStatementsByDate(
+	@startDate SMALLDATETIME,
+	@endDate SMALLDATETIME
+)
+AS
+BEGIN
+	SELECT * FROM [Statements] [statements] 
+	WHERE [statements].[date] BETWEEN @startDate AND @endDate
+END
+GO
+
+CREATE PROCEDURE usp_FilterStatementsByType(
+	@typeId INT
+)
+AS
+BEGIN
+	SELECT SUM([statements].[value]) total FROM [Statements] [statements] WHERE [statements].typeId = @typeId
+END
+GO

@@ -52,3 +52,27 @@ BEGIN
 	END CATCH
 END
 GO
+
+---------------------------------------
+
+CREATE PROCEDURE usp_ListAllEnvironments (
+	@userId INT
+) 
+AS
+BEGIN
+	SELECT [environments].[id], [environments].[name], [environments].[description] 
+	FROM Statements statements
+	INNER JOIN [Environments] [environments] ON [environments].id = statements.environmentId
+	WHERE statements.userId = @userId
+END
+GO
+
+CREATE PROCEDURE usp_FilterEnvironmentsByName(
+	@name VARCHAR(20)
+)
+AS
+BEGIN
+	DECLARE @nameLowercase VARCHAR(20) = LOWER(@name)
+	SELECT * FROM [Environments] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
+END
+GO

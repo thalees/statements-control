@@ -61,3 +61,47 @@ BEGIN
 	END CATCH
 END
 GO
+
+----------------------------------------
+
+CREATE PROCEDURE usp_ListAllInvestments (
+	@userId INT
+) 
+AS
+BEGIN
+	SELECT [investments].[id], [investments].[value], [investments].[startDate], [investments].[endDate]
+	FROM [Investments] [investments] WHERE [investments].[userId] = @userId
+END
+GO
+
+CREATE PROCEDURE usp_FilterInvestmentsByName(
+	@name VARCHAR(20)
+)
+AS
+BEGIN
+	DECLARE @nameLowercase VARCHAR(20) = LOWER(@name)
+	SELECT * FROM [Investments] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
+END
+GO
+
+CREATE PROCEDURE usp_FilterInvestmentsByDate(
+	@startDate SMALLDATETIME,
+	@endDate SMALLDATETIME
+)
+AS
+BEGIN
+	SELECT * FROM [Investments] [investments] 
+	WHERE [investments].[startDate] BETWEEN @startDate AND @endDate
+END
+GO
+
+CREATE PROCEDURE usp_FilterInvestmentsByValue(
+	@minValue DECIMAL,
+	@maxValue DECIMAL
+)
+AS
+BEGIN
+	SELECT * FROM [Investments] [investments] 
+	WHERE [investments].[value] BETWEEN @minValue AND @maxValue
+END
+GO

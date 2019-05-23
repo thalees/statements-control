@@ -55,3 +55,27 @@ BEGIN
 	END CATCH
 END
 GO
+
+---------------------------------------
+
+CREATE PROCEDURE usp_ListAllTypes (
+	@userId INT
+) 
+AS
+BEGIN
+	SELECT [types].[id], [types].[name], [types].[description], [types].[action] 
+	FROM Statements statements
+	INNER JOIN [Types] [types] ON [types].id = statements.typeId
+	WHERE statements.userId = @userId
+END
+GO
+
+CREATE PROCEDURE usp_FilterTypesByName(
+	@name VARCHAR(20)
+)
+AS
+BEGIN
+	DECLARE @nameLowercase VARCHAR(20) = LOWER(@name)
+	SELECT * FROM [Types] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
+END
+GO

@@ -58,3 +58,44 @@ BEGIN
 	END CATCH
 END
 GO
+
+CREATE PROCEDURE usp_ListAllGoals (
+	@userId INT
+) 
+AS
+BEGIN
+	SELECT [goals].[id], [goals].[name], [goals].[time]
+	FROM [Goals] [goals] WHERE [goals].[userId] = @userId
+END
+GO
+
+CREATE PROCEDURE usp_FilterGoalsByName(
+	@name VARCHAR(20)
+)
+AS
+BEGIN
+	DECLARE @nameLowercase VARCHAR(20) = LOWER(@name)
+	SELECT * FROM [Goals] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
+END
+GO
+
+CREATE PROCEDURE usp_FilterGoalsByDate(
+	@endDate SMALLDATETIME
+)
+AS
+BEGIN
+	SELECT * FROM [Goals] [goals] 
+	WHERE [goals].[endDate] >= @endDate
+END
+GO
+
+CREATE PROCEDURE usp_FilterGoalsByValue(
+	@minValue DECIMAL,
+	@maxValue DECIMAL
+)
+AS
+BEGIN
+	SELECT * FROM [Goals] [goals] 
+	WHERE [goals].[value] BETWEEN @minValue AND @maxValue
+END
+GO

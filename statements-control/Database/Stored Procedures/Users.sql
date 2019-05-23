@@ -58,3 +58,13 @@ BEGIN
 	END CATCH
 END
 GO
+
+CREATE PROCEDURE usp_FilterUsersByName(
+	@name VARCHAR(20)
+)
+AS
+BEGIN
+	DECLARE @nameLowercase VARCHAR(20) = LOWER(@name)
+	SELECT * FROM [Users] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
+END
+GO
