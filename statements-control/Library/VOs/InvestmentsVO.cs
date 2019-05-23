@@ -19,3 +19,4 @@ namespace Library.VOs
         public int UserId { get => userId; set => userId = value; }
     }
 }
+
