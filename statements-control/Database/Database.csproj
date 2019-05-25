@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Indexes\" />
+    <Folder Include="Initializer\" />
     <Folder Include="Stored Procedures\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
