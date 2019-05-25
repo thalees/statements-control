@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Security.Cryptography;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace statements_control
 {
@@ -47,6 +49,11 @@ namespace statements_control
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ChangeButtonColor(btn_Database, Color.Red);
             }     
+        }
+
+        private void fr_Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

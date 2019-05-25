@@ -48,6 +48,7 @@ namespace statements_control
                 {
                     MessageBox.Show("Parâmetros do Banco de Dados alterados com sucesso!", "Sucesso",
                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Encryption
                 }
                 else
                     MessageBox.Show("Erro ao alterar parâmetros do Banco de Dados", "Erro!",
