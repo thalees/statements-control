@@ -44,6 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Cursors\" />
     <Folder Include="Functions\" />
     <Folder Include="Indexes\" />
     <Folder Include="Initializer\" />
