@@ -34,6 +34,7 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Database = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SuspendLayout();
             // 
             // btn_login
@@ -60,6 +61,7 @@
             this.btn_login.Size = new System.Drawing.Size(172, 37);
             this.btn_login.TabIndex = 9;
             this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // bunifuMaterialTextbox2
             // 
@@ -104,7 +106,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(463, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 23);
+            this.label1.Size = new System.Drawing.Size(51, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "Login";
             // 
@@ -116,11 +118,38 @@
             this.panel1.Size = new System.Drawing.Size(334, 394);
             this.panel1.TabIndex = 5;
             // 
+            // btn_Database
+            // 
+            this.btn_Database.ActiveBorderThickness = 1;
+            this.btn_Database.ActiveCornerRadius = 20;
+            this.btn_Database.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_Database.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_Database.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_Database.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Database.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Database.BackgroundImage")));
+            this.btn_Database.ButtonText = "Database";
+            this.btn_Database.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Database.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Database.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_Database.IdleBorderThickness = 1;
+            this.btn_Database.IdleCornerRadius = 20;
+            this.btn_Database.IdleFillColor = System.Drawing.Color.White;
+            this.btn_Database.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_Database.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_Database.Location = new System.Drawing.Point(568, 345);
+            this.btn_Database.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Database.Name = "btn_Database";
+            this.btn_Database.Size = new System.Drawing.Size(99, 33);
+            this.btn_Database.TabIndex = 10;
+            this.btn_Database.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Database.Click += new System.EventHandler(this.btn_Database_Click);
+            // 
             // fr_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 392);
+            this.Controls.Add(this.btn_Database);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.bunifuMaterialTextbox2);
             this.Controls.Add(this.bunifuMaterialTextbox1);
@@ -129,10 +158,11 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fr_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.fr_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +175,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_Database;
     }
 }
 
