@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fr_DataBaseParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_DataBaseParameters.Designer.cs">
+      <DependentUpon>fr_DataBaseParameters.cs</DependentUpon>
+    </Compile>
     <Compile Include="fr_Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="uc_TypesRegister.Designer.cs">
       <DependentUpon>uc_TypesRegister.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fr_DataBaseParameters.resx">
+      <DependentUpon>fr_DataBaseParameters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fr_Default.resx">
       <DependentUpon>fr_Default.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{BBD5EFBB-56E8-429F-B29E-60DDF2DB0E34}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

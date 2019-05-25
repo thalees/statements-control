@@ -18,7 +18,7 @@ namespace Library.DAOs
             user.Id = Convert.ToInt32(row["id"]);
             user.Name = row["name"].ToString();
             user.Picture = (row["picture"] as byte[]);
-            user.DtBirth = Convert.ToDateTime(row["dtBirth"]);
+            user.DateBirth = Convert.ToDateTime(row["dtBirth"]);
             user.Password = row["password"].ToString();
 
             return user;
@@ -29,7 +29,7 @@ namespace Library.DAOs
                 new SqlParameter("id",(vo as UsersVO).Id),
                 new SqlParameter("name", (vo as UsersVO).Name),
                 new SqlParameter("picture", (vo as UsersVO).Picture),
-                new SqlParameter("dtBirth", (vo as UsersVO).DtBirth),
+                new SqlParameter("dtBirth", (vo as UsersVO).DateBirth),
                 new SqlParameter("password", (vo as UsersVO).Password),
             };
 
@@ -103,8 +103,8 @@ namespace Library.DAOs
             else
                 parameters.Add(new SqlParameter("@picture", DBNull.Value));
 
-            if ((vo as UsersVO).DtBirth > DateTime.Now)
-                parameters.Add(new SqlParameter("@dtBirth", (vo as UsersVO).DtBirth));
+            if ((vo as UsersVO).DateBirth > DateTime.Now)
+                parameters.Add(new SqlParameter("@dtBirth", (vo as UsersVO).DateBirth));
             else
                 parameters.Add(new SqlParameter("@dtbirth", DBNull.Value));
 
