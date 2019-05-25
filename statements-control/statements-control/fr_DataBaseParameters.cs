@@ -22,6 +22,32 @@ namespace statements_control
             InitializeComponent();
         }
 
+        private void CreateDatabase(string databaseName)
+        {
+            if (File.Exists(@"..\..\..\Database\Stored Procedures\Database.sql"))
+            {
+                try
+                {
+                    FileInfo teste = new FileInfo(@"..\..\..\Database\Stored Procedures\Database.sql");
+                    string script = teste.OpenText().ReadToEnd();
+                    script = script.Replace("\n", " ");
+                    script = script.Replace("\r", " ");
+                    script = script.Replace("GO", " ");
+                    script = script.Replace("USE", " ");
+                    script = script.Replace("\t", " ");
+                    Methods.SQLExecuteNonQuery(script, null);
+
+                    SqlParameter[] parameter = { new SqlParameter("databaseName", databaseName) };
+                    Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);
+                }
+                catch
+                {
+                    SqlParameter[] parameter = { new SqlParameter("databaseName", databaseName) };
+                    Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);
+                }
+            }
+        }
+
         private void ChangeButtonColor(Bunifu.Framework.UI.BunifuThinButton2 button, Color color)
         {
             button.IdleForecolor = color;
@@ -102,8 +128,7 @@ namespace statements_control
                         $"\n Gostaria de criar agora?", "Não encontrado.",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        SqlParameter[] parameter = { new SqlParameter("databaseName", txtDbCatalog.Text) };
-                        Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);
+                        CreateDatabase(txtDbCatalog.Text);
                         ChangeButtonColor(btn_TestConnection, Color.SeaGreen);
                     }
                     else
