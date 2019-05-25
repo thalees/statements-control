@@ -1,7 +1,7 @@
 USE [StatementsControl]
 GO
 
-CREATE TRIGGER tr_EnvironmentDelete ON [Environments] 
+CREATE TRIGGER tr_DeleteEnvironment ON [Environments] 
 INSTEAD OF DELETE AS
 	BEGIN
 		DECLARE @environmentId INT = (SELECT [id] from deleted)

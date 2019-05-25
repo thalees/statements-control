@@ -1,7 +1,7 @@
 USE [StatementsControl]
 GO
 
-CREATE TRIGGER tr_TypeDelete ON [Types] 
+CREATE TRIGGER tr_DeleteType ON [Types] 
 INSTEAD OF DELETE AS
 	BEGIN
 		DECLARE @typeId INT = (SELECT [id] from deleted)

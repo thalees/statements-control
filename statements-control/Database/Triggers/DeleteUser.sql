@@ -1,7 +1,7 @@
 USE [StatementsControl]
 GO
 
-CREATE TRIGGER tr_UserDelete ON [Users] 
+CREATE TRIGGER tr_DeleteUser ON [Users] 
 INSTEAD OF DELETE AS
 	BEGIN
 		DECLARE @userId INT = (SELECT [id] from deleted)
