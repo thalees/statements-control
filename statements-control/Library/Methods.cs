@@ -51,7 +51,7 @@ namespace Library
 
         public static void SQLExecuteNonQuery(string commandString, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = ConnectionDB.GetConnection(GlobalVariables.catalogDB, GlobalVariables.userIdDB, GlobalVariables.passwordDB))
+            using (SqlConnection connection = ConnectionDB.GetConnection())
             {
                 using (SqlCommand command = new SqlCommand(commandString, connection))
                 {
@@ -64,7 +64,7 @@ namespace Library
 
         public static DataTable SQLExecuteSelect(string commandString, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = ConnectionDB.GetConnection(GlobalVariables.catalogDB, GlobalVariables.userIdDB, GlobalVariables.passwordDB))
+            using (SqlConnection connection = ConnectionDB.GetConnection())
             {
                 using (SqlDataAdapter adapter = new SqlDataAdapter(commandString, connection))
                 {
@@ -79,7 +79,7 @@ namespace Library
 
         public static void SQLNonQueryProcedure(string procedureName, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = ConnectionDB.GetConnection(GlobalVariables.catalogDB, GlobalVariables.userIdDB, GlobalVariables.passwordDB))
+            using (SqlConnection connection = ConnectionDB.GetConnection())
             {
                 using (SqlCommand command = new SqlCommand(procedureName, connection))
                 {
@@ -93,7 +93,7 @@ namespace Library
 
         public static DataTable SQLSelectProcedure(string procedureName, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = ConnectionDB.GetConnection(GlobalVariables.catalogDB, GlobalVariables.userIdDB, GlobalVariables.passwordDB))
+            using (SqlConnection connection = ConnectionDB.GetConnection())
             {
                 using (SqlDataAdapter adapter = new SqlDataAdapter(procedureName, connection))
                 {
