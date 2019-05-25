@@ -28,14 +28,18 @@ namespace statements_control
             {
                 try
                 {
-                    FileInfo teste = new FileInfo(@"..\..\..\Database\Stored Procedures\Database.sql");
-                    string script = teste.OpenText().ReadToEnd();
+                    FileInfo file = new FileInfo(@"..\..\..\Database\Stored Procedures\Database.sql");
+                    string script = file.OpenText().ReadToEnd();
                     script = script.Replace("\n", " ");
                     script = script.Replace("\r", " ");
-                    script = script.Replace("GO", " ");
-                    script = script.Replace("USE", " ");
                     script = script.Replace("\t", " ");
-                    Methods.SQLExecuteNonQuery(script, null);
+
+                    string[] commandArray = script.Split(new string[] { "GO" }, StringSplitOptions.RemoveEmptyEntries);
+                    for (int i = 0; i < commandArray.Length; i++)
+                    {
+                        Methods.SQLExecuteNonQuery(commandArray[i], null);
+                    }
+                    //Methods.SQLExecuteNonQuery(script, null);
 
                     SqlParameter[] parameter = { new SqlParameter("databaseName", databaseName) };
                     Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);

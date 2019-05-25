@@ -1,3 +1,6 @@
+USE [master]
+GO
+
 CREATE PROCEDURE usp_CreateDatabase (
 	@databaseName VARCHAR(20)
 )
