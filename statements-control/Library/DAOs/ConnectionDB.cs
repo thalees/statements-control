@@ -15,7 +15,7 @@ namespace Library.DAOs
 
         public static bool setCatalogDB(string parCatalogDB, Type formType)
         {
-            if (formType.Name.ToString() == "fr_DataBaseParameters")
+            if (formType.Name.ToString() == "fr_DataBaseParameters" || formType.Name.ToString() == "fr_Login")
             {
                 catalogDB = parCatalogDB;
                 return true;
@@ -23,9 +23,13 @@ namespace Library.DAOs
             else
                 return false;
         }
+        public static string getCatalogDB()
+        {
+            return catalogDB;
+        }
         public static bool setUsernameDB(string parUsernameDB, Type formType)
         {
-            if (formType.Name.ToString() == "fr_DataBaseParameters")
+            if (formType.Name.ToString() == "fr_DataBaseParameters" || formType.Name.ToString() == "fr_Login")
             {
                 userIdDB = parUsernameDB;
                 return true;
@@ -35,7 +39,7 @@ namespace Library.DAOs
         }
         public static bool setPasswordDB(string parPassword, Type formType)
         {
-            if (formType.Name.ToString() == "fr_DataBaseParameters")
+            if (formType.Name.ToString() == "fr_DataBaseParameters" || formType.Name.ToString() == "fr_Login")
             {
                 passwordDB = parPassword;
                 return true;

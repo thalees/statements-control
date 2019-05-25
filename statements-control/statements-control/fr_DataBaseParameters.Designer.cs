@@ -50,7 +50,7 @@
             this.btn_Connect.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btn_Connect.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Connect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Connect.BackgroundImage")));
-            this.btn_Connect.ButtonText = "Login";
+            this.btn_Connect.ButtonText = "Salvar";
             this.btn_Connect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Connect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Connect.ForeColor = System.Drawing.Color.SeaGreen;
