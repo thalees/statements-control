@@ -1,7 +1,7 @@
 USE [StatementsControl]
 GO
 
-CREATE PROCEDURE ups_ChangeAllTypeName (
+CREATE PROCEDURE usp_ChangeAllTypeName (
 	@userId INT,
 	@name VARCHAR(20)
 )
