@@ -7,25 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library.DAOs;
+using Library.VOs;
 
 namespace statements_control
 {
     public partial class uc_DefaultSearch : UserControl
     {
-        private static uc_DefaultSearch _instance;
-
-        public static uc_DefaultSearch Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new uc_DefaultSearch();
-                return _instance;
-            }
-        }
+        protected MasterDAO searchDAO;
         public uc_DefaultSearch()
         {
             InitializeComponent();
+        }
+
+        protected virtual void PreencheTela(MasterVO vo)
+        {
+            //preencher nos filhos
         }
     }
 }

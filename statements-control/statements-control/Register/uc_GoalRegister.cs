@@ -8,22 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace statements_control
+namespace statements_control.Register
 {
-    public partial class uc_About : UserControl
+    public partial class uc_GoalRegister : uc_DefaultRegister
     {
-        protected static uc_About _instance;
-
-        public static uc_About Instance
+        protected static uc_GoalRegister _instance;
+        public static uc_GoalRegister Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new uc_About();
+                    _instance = new uc_GoalRegister();
                 return _instance;
             }
         }
-        public uc_About()
+        public uc_GoalRegister()
         {
             InitializeComponent();
         }

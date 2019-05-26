@@ -1,6 +1,6 @@
 ﻿namespace statements_control
 {
-    partial class uc_TypesSearch
+    partial class uc_TypeRegister
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // uc_TypeRegister
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "uc_TypeRegister";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

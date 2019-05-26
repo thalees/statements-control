@@ -16,10 +16,5 @@ namespace statements_control
         {
             InitializeComponent();
         }
-
-        private void uc_DefaultRegister_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

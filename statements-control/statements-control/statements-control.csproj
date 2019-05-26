@@ -71,6 +71,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register\uc_EnvironmentRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\uc_EnvironmentRegister.Designer.cs">
+      <DependentUpon>uc_EnvironmentRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\uc_GoalRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\uc_GoalRegister.Designer.cs">
+      <DependentUpon>uc_GoalRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\uc_InvestimentRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\uc_InvestimentRegister.Designer.cs">
+      <DependentUpon>uc_InvestimentRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\uc_StatementRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\uc_StatementRegister.Designer.cs">
+      <DependentUpon>uc_StatementRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\uc_EnvironmentSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\uc_EnvironmentSearch.Designer.cs">
+      <DependentUpon>uc_EnvironmentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\uc_TypeSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\uc_TypeSearch.Designer.cs">
+      <DependentUpon>uc_TypeSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_About.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,17 +119,23 @@
     <Compile Include="uc_Dashboard.Designer.cs">
       <DependentUpon>uc_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="uc_DefaultRegister.cs">
+    <Compile Include="Register\uc_DefaultRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_DefaultRegister.Designer.cs">
+    <Compile Include="Register\uc_DefaultRegister.Designer.cs">
       <DependentUpon>uc_DefaultRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="uc_TypesRegister.cs">
+    <Compile Include="Search\uc_DefaultSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_TypesRegister.Designer.cs">
-      <DependentUpon>uc_TypesRegister.cs</DependentUpon>
+    <Compile Include="Search\uc_DefaultSearch.Designer.cs">
+      <DependentUpon>uc_DefaultSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\uc_TypeRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\uc_TypeRegister.Designer.cs">
+      <DependentUpon>uc_TypeRegister.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fr_DataBaseParameters.resx">
       <DependentUpon>fr_DataBaseParameters.cs</DependentUpon>
@@ -114,14 +156,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Register\uc_StatementRegister.resx">
+      <DependentUpon>uc_StatementRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\uc_TypeRegister.resx">
+      <DependentUpon>uc_TypeRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_About.resx">
       <DependentUpon>uc_About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_Dashboard.resx">
       <DependentUpon>uc_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_DefaultRegister.resx">
+    <EmbeddedResource Include="Register\uc_DefaultRegister.resx">
       <DependentUpon>uc_DefaultRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_DefaultSearch.resx">
+      <DependentUpon>uc_DefaultSearch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

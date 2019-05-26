@@ -16,7 +16,7 @@ namespace statements_control
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fr_Login());
+            Application.Run(new fr_Default());
         }
     }
 }

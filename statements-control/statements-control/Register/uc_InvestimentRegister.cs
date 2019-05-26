@@ -8,22 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace statements_control
+namespace statements_control.Register
 {
-    public partial class uc_About : UserControl
+    public partial class uc_InvestimentRegister : uc_DefaultRegister
     {
-        protected static uc_About _instance;
-
-        public static uc_About Instance
+        protected static uc_InvestimentRegister _instance;
+        public static uc_InvestimentRegister Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new uc_About();
+                    _instance = new uc_InvestimentRegister();
                 return _instance;
             }
         }
-        public uc_About()
+
+        public uc_InvestimentRegister()
         {
             InitializeComponent();
         }
