@@ -102,5 +102,18 @@ namespace Library.DAOs
 
             return Methods.SQLExecuteSelect("usp_SearchType", parameters.ToArray());
         }
+
+        public List<TypesVO> List(string name)
+        {
+            SqlParameter[] parameter = { new SqlParameter("@name", name) };
+            DataTable table = Methods.SQLSelectProcedure("usp_FilterTypesByName", parameter);
+
+            List<TypesVO> list = new List<TypesVO>();
+            foreach (DataRow row in table.Rows)
+            {
+                list.Add(BiuldVO(row) as TypesVO);
+            }
+            return list;
+        }
     }
 }
