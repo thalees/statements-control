@@ -1,7 +1,5 @@
-USE [StatementsControl]
-GO
 
--- Insert
+
 CREATE PROCEDURE usp_InsertType(
 	@name VARCHAR(50), 
     @description VARCHAR(100),

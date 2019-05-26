@@ -1,7 +1,4 @@
-USE [StatementsControl]
-GO
 
--- Insert
 CREATE PROCEDURE usp_InsertUser (
     @name VARCHAR(20), 
     @picture VARCHAR(MAX), 

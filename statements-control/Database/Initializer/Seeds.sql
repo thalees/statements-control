@@ -1,5 +1,4 @@
-USE [StatementsControl]
-GO
+
 
 usp_InsertUser 'Thales', 'image1', '18/03/1999', 'Senha'
 GO

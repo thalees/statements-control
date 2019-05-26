@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +21,112 @@ namespace statements_control
         public fr_DataBaseParameters()
         {
             InitializeComponent();
+        }
+
+        private bool ExecuteSQLFiles(string path)
+        {
+            bool executed = false;
+            try
+            {
+                if (File.Exists(path))
+                {
+                    FileInfo file = new FileInfo(path);
+                    string script = file.OpenText().ReadToEnd();
+                    script = script.Replace("\n", " ");
+                    script = script.Replace("\r", " ");
+                    script = script.Replace("\t", " ");
+
+                    string[] commandArray = script.Split(new string[] { "GO" }, StringSplitOptions.RemoveEmptyEntries);
+                    for (int i = 0; i < commandArray.Length; i++)
+                    {
+                        Methods.SQLExecuteNonQuery(commandArray[i], null);
+                    }
+                }
+                executed = true;
+            }
+            catch
+            {
+                executed = false;
+            }
+
+            return executed;
+
+        }
+
+        private void CreateDatabase(string databaseName)
+        {
+            if (File.Exists(@"..\..\..\Database\Stored Procedures\Database.sql"))
+            {
+                try
+                {
+                    ExecuteSQLFiles(@"..\..\..\Database\Stored Procedures\Database.sql");
+                    SqlParameter[] parameter = { new SqlParameter("databaseName", databaseName) };
+                    Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);
+                }
+                catch
+                {
+                    SqlParameter[] parameter = { new SqlParameter("databaseName", databaseName) };
+                    Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);
+                }
+            }
+        }
+
+        private List<string> GetPathToExecute()
+        {
+            List<string> pathToExecute = new List<string>();
+            string pathBase = @"..\..\..\Database\";
+
+            string pathFolder = @"Initializer\";
+            if (File.Exists(pathBase + pathFolder + "CreateTables.sql"))
+                pathToExecute.Add(pathBase +pathFolder + "CreateTables.sql");
+
+            pathFolder = @"Stored Procedures\";
+            if(File.Exists(pathBase + pathFolder + "Users.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Users.sql");
+            if (File.Exists(pathBase + pathFolder + "Types.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Statements.sql");
+            if (File.Exists(pathBase + pathFolder + "Statements.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Statements.sql");
+            if (File.Exists(pathBase + pathFolder + "Investments.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Investments.sql");
+            if (File.Exists(pathBase + pathFolder + "Environments.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Environments.sql");
+
+
+            pathFolder = @"Triggers\";
+            if (File.Exists(pathBase + pathFolder + "DeleteEnvironment.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "DeleteEnvironment.sql");
+            if (File.Exists(pathBase + pathFolder + "DeleteType.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "DeleteType.sql");
+            if (File.Exists(pathBase + pathFolder + "DeleteUser.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "DeleteUser.sql");
+
+            pathFolder = @"Indexes\";
+            if (File.Exists(pathBase + pathFolder + "ActionTypes.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "ActionTypes.sql");
+            if (File.Exists(pathBase + pathFolder + "UserIdGoals.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "UserIdGoals.sql");
+
+            pathFolder = @"Cursors\";
+            if (File.Exists(pathBase + pathFolder + "Cursors.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Cursors.sql");
+
+            pathFolder = @"Functions\";
+            if (File.Exists(pathBase + pathFolder + "Goals.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Goals.sql");
+
+            return pathToExecute;
+        }
+
+        public void BiuldDatabase(string instanceParameter)
+        {
+            List<string> pathToExecute = new List<string>();
+            pathToExecute = GetPathToExecute();
+
+            foreach (string path in pathToExecute)
+            {
+                ExecuteSQLFiles(path);
+            }
         }
 
         private void ChangeButtonColor(Bunifu.Framework.UI.BunifuThinButton2 button, Color color)
@@ -79,7 +186,7 @@ namespace statements_control
             bool tryWithMaster = false;
             try
             {
-                using (ConnectionDB.GetConnection())
+                using (SqlConnection connection = ConnectionDB.GetConnection())
                 {
                     ChangeButtonColor(btn_TestConnection, Color.SeaGreen);
                 }
@@ -93,26 +200,24 @@ namespace statements_control
                 return;
 
             string lastCatalogValue = ConnectionDB.getCatalogDB();
+            ConnectionDB.setCatalogDB("master", this.GetType());
+            bool biuldDatabase = false;
             try
             {
-                ConnectionDB.setCatalogDB("master", this.GetType());
-                using (ConnectionDB.GetConnection())
+                using (SqlConnection connection = ConnectionDB.GetConnection())
                 {
                     if(MessageBox.Show($"Não foi encontrado nenhum banco de dados com o nome: {lastCatalogValue}" +
-                        $"\n Gostaria de criar agora?", "Não encontrado.",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        $"\n Gostaria de criar agora?", "Não encontrado.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        SqlParameter[] parameter = { new SqlParameter("databaseName", txtDbCatalog.Text) };
-                        Methods.SQLNonQueryProcedure("usp_CreateDatabase", parameter);
-                        ChangeButtonColor(btn_TestConnection, Color.SeaGreen);
+                        CreateDatabase(lastCatalogValue);
+                        biuldDatabase = true;
                     }
                     else
                         ChangeButtonColor(btn_TestConnection, Color.Red);
-
                 }
             }
             catch
-            {
+            {               
                 MessageBox.Show("Suas credenciais com o banco de dados não estão corretas.", "Erro!", 
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ChangeButtonColor(btn_TestConnection, Color.Red);
@@ -120,6 +225,17 @@ namespace statements_control
             finally
             {
                 ConnectionDB.setCatalogDB(lastCatalogValue, this.GetType());
+            }
+
+            Thread.Sleep(5000);
+            if(biuldDatabase)
+            {
+                using (SqlConnection connection = ConnectionDB.GetConnection())
+                {
+                    BiuldDatabase(lastCatalogValue);
+                    MessageBox.Show("Banco de dados criado com sucesso!", "Concluido.",
+                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
