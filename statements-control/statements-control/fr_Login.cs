@@ -62,7 +62,7 @@ namespace statements_control
             {
                 string[] dataBaseParameters = Encryption.DecryptString(File.ReadAllText("DataBaseParameters.txt")).Split('|');
                 ConnectionDB.setCatalogDB(dataBaseParameters[0], this.GetType());
-                ConnectionDB.setPasswordDB(dataBaseParameters[1], this.GetType());
+                ConnectionDB.setUsernameDB(dataBaseParameters[1], this.GetType());
                 ConnectionDB.setPasswordDB(dataBaseParameters[2], this.GetType());
             } 
 
