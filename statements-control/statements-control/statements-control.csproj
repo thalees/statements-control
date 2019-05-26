@@ -162,6 +162,9 @@
     <EmbeddedResource Include="Register\uc_TypeRegister.resx">
       <DependentUpon>uc_TypeRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_TypeSearch.resx">
+      <DependentUpon>uc_TypeSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_About.resx">
       <DependentUpon>uc_About.cs</DependentUpon>
     </EmbeddedResource>
