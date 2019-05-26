@@ -30,29 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txt_Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dgv_Listing = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txt_Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Listing)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txt_Search
-            // 
-            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Search.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_Search.HintText = "Buscar";
-            this.txt_Search.isPassword = false;
-            this.txt_Search.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txt_Search.LineIdleColor = System.Drawing.Color.Gray;
-            this.txt_Search.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txt_Search.LineThickness = 3;
-            this.txt_Search.Location = new System.Drawing.Point(81, 92);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(616, 44);
-            this.txt_Search.TabIndex = 10;
-            this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dgv_Listing
             // 
@@ -82,6 +63,25 @@
             this.dgv_Listing.Size = new System.Drawing.Size(718, 310);
             this.dgv_Listing.TabIndex = 6;
             // 
+            // txt_Search
+            // 
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Search.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_Search.HintText = "Buscar";
+            this.txt_Search.isPassword = false;
+            this.txt_Search.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txt_Search.LineIdleColor = System.Drawing.Color.Gray;
+            this.txt_Search.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txt_Search.LineThickness = 3;
+            this.txt_Search.Location = new System.Drawing.Point(81, 92);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(616, 44);
+            this.txt_Search.TabIndex = 10;
+            this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // uc_DefaultSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -96,8 +96,7 @@
         }
 
         #endregion
-
-        protected Bunifu.Framework.UI.BunifuMaterialTextbox txt_Search;
         protected Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Listing;
+        protected Bunifu.Framework.UI.BunifuMaterialTextbox txt_Search;
     }
 }

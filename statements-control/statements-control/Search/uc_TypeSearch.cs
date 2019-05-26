@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library.VOs;
+using Library.DAOs;
 
 namespace statements_control.Search
 {
@@ -26,6 +28,13 @@ namespace statements_control.Search
         public uc_TypeSearch()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<TypesVO> list = (new TypesDAO()).List(txt_Search.Text.Trim());
+            dgv_Listing.DataSource = list;
+            dgv_Listing.ReadOnly = true;
         }
     }
 }
