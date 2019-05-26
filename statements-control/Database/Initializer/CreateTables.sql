@@ -1,10 +1,3 @@
-USE [master]
-GO
-CREATE DATABASE [StatementsControl]
-GO
-USE [StatementsControl]
-GO
-
 CREATE TABLE [dbo].[Investments] (
 	 [id] INT NOT NULL PRIMARY KEY IDENTITY (1,1),
 	 [userId] INT NOT NULL,

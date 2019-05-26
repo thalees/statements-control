@@ -1,7 +1,4 @@
-USE [StatementsControl]
-GO
 
--- Insert
 CREATE PROCEDURE usp_InsertStatement(
 	@userId INT,
 	@typeId INT,
@@ -66,7 +63,6 @@ BEGIN
 END
 GO
 
---------------------------------------------------------------------
 
 CREATE PROCEDURE usp_ListAllStatements (
 	@userId INT

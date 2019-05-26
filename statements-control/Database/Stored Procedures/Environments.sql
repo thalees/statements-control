@@ -1,7 +1,3 @@
-USE [StatementsControl]
-GO
-
--- Insert
 CREATE PROCEDURE usp_InsertEnvironment(
 	@name VARCHAR(50), 
     @description VARCHAR(100)
@@ -53,8 +49,6 @@ BEGIN
 	END CATCH
 END
 GO
-
----------------------------------------
 
 CREATE PROCEDURE usp_ListAllEnvironments (
 	@userId INT

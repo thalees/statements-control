@@ -1,5 +1,3 @@
-USE [StatementsControl]
-GO
 
 CREATE TRIGGER tr_DeleteUser ON [Users] 
 INSTEAD OF DELETE AS

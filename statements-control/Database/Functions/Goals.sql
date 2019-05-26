@@ -1,8 +1,4 @@
-USE [StatementsControl]
-GO
 
-
--- Functions About Goals
 CREATE FUNCTION fn_ListAllGoals (
 	@userId INT
 ) RETURNS TABLE
