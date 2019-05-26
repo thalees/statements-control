@@ -59,10 +59,10 @@
             this.btn_Connect.IdleFillColor = System.Drawing.Color.White;
             this.btn_Connect.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btn_Connect.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_Connect.Location = new System.Drawing.Point(55, 169);
-            this.btn_Connect.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Connect.Location = new System.Drawing.Point(73, 208);
+            this.btn_Connect.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btn_Connect.Name = "btn_Connect";
-            this.btn_Connect.Size = new System.Drawing.Size(172, 37);
+            this.btn_Connect.Size = new System.Drawing.Size(229, 46);
             this.btn_Connect.TabIndex = 13;
             this.btn_Connect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Connect.Click += new System.EventHandler(this.btn_Connect_Click);
@@ -79,19 +79,20 @@
             this.txtDbCatalog.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDbCatalog.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtDbCatalog.LineThickness = 3;
-            this.txtDbCatalog.Location = new System.Drawing.Point(36, 66);
-            this.txtDbCatalog.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDbCatalog.Location = new System.Drawing.Point(48, 81);
+            this.txtDbCatalog.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDbCatalog.Name = "txtDbCatalog";
-            this.txtDbCatalog.Size = new System.Drawing.Size(210, 26);
+            this.txtDbCatalog.Size = new System.Drawing.Size(280, 32);
             this.txtDbCatalog.TabIndex = 11;
             this.txtDbCatalog.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(52, 24);
+            this.lblTitle.Location = new System.Drawing.Point(69, 30);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(158, 13);
+            this.lblTitle.Size = new System.Drawing.Size(210, 17);
             this.lblTitle.TabIndex = 10;
             this.lblTitle.Text = "Parâmetros do Banco de Dados";
             // 
@@ -107,10 +108,10 @@
             this.txtDbUsername.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDbUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtDbUsername.LineThickness = 3;
-            this.txtDbUsername.Location = new System.Drawing.Point(36, 100);
-            this.txtDbUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDbUsername.Location = new System.Drawing.Point(48, 123);
+            this.txtDbUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDbUsername.Name = "txtDbUsername";
-            this.txtDbUsername.Size = new System.Drawing.Size(210, 26);
+            this.txtDbUsername.Size = new System.Drawing.Size(280, 32);
             this.txtDbUsername.TabIndex = 14;
             this.txtDbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -125,17 +126,18 @@
             this.txtDbPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDbPassword.HintForeColor = System.Drawing.Color.Empty;
-            this.txtDbPassword.HintText = "Password";
+            this.txtDbPassword.HintText = "";
             this.txtDbPassword.isPassword = true;
             this.txtDbPassword.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtDbPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDbPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtDbPassword.LineThickness = 3;
-            this.txtDbPassword.Location = new System.Drawing.Point(36, 134);
-            this.txtDbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDbPassword.Location = new System.Drawing.Point(48, 165);
+            this.txtDbPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDbPassword.Name = "txtDbPassword";
-            this.txtDbPassword.Size = new System.Drawing.Size(210, 26);
+            this.txtDbPassword.Size = new System.Drawing.Size(280, 32);
             this.txtDbPassword.TabIndex = 15;
+            this.txtDbPassword.Text = "Password";
             this.txtDbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btn_Back
@@ -156,10 +158,10 @@
             this.btn_Back.IdleFillColor = System.Drawing.Color.White;
             this.btn_Back.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btn_Back.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_Back.Location = new System.Drawing.Point(193, 230);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Back.Location = new System.Drawing.Point(257, 283);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(68, 37);
+            this.btn_Back.Size = new System.Drawing.Size(91, 46);
             this.btn_Back.TabIndex = 16;
             this.btn_Back.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
@@ -182,19 +184,19 @@
             this.btn_TestConnection.IdleFillColor = System.Drawing.Color.White;
             this.btn_TestConnection.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btn_TestConnection.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_TestConnection.Location = new System.Drawing.Point(115, 230);
-            this.btn_TestConnection.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_TestConnection.Location = new System.Drawing.Point(153, 283);
+            this.btn_TestConnection.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btn_TestConnection.Name = "btn_TestConnection";
-            this.btn_TestConnection.Size = new System.Drawing.Size(68, 37);
+            this.btn_TestConnection.Size = new System.Drawing.Size(91, 46);
             this.btn_TestConnection.TabIndex = 17;
             this.btn_TestConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TestConnection.Click += new System.EventHandler(this.btn_TestConnection_Click);
             // 
             // fr_DataBaseParameters
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 269);
+            this.ClientSize = new System.Drawing.Size(367, 331);
             this.Controls.Add(this.btn_TestConnection);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.txtDbPassword);
@@ -202,6 +204,7 @@
             this.Controls.Add(this.btn_Connect);
             this.Controls.Add(this.txtDbCatalog);
             this.Controls.Add(this.lblTitle);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fr_DataBaseParameters";
             this.Text = "fr_DataBaseParameters";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

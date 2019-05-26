@@ -8,22 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace statements_control
+namespace statements_control.Search
 {
-    public partial class uc_About : UserControl
+    public partial class uc_EnvironmentSearch : uc_DefaultSearch
     {
-        protected static uc_About _instance;
+        private static uc_EnvironmentSearch _instance;
 
-        public static uc_About Instance
+        public static uc_EnvironmentSearch Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new uc_About();
+                    _instance = new uc_EnvironmentSearch();
                 return _instance;
             }
         }
-        public uc_About()
+        public uc_EnvironmentSearch()
         {
             InitializeComponent();
         }

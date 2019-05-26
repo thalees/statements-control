@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 18);
+            this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bem-vind@ ";
             // 
@@ -54,7 +54,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(62, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 17);
+            this.label2.Size = new System.Drawing.Size(223, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Este é o seu Dashboard :)";
             // 
@@ -62,9 +62,9 @@
             // 
             this.lb_Username.AutoSize = true;
             this.lb_Username.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Username.Location = new System.Drawing.Point(136, 49);
+            this.lb_Username.Location = new System.Drawing.Point(174, 49);
             this.lb_Username.Name = "lb_Username";
-            this.lb_Username.Size = new System.Drawing.Size(47, 18);
+            this.lb_Username.Size = new System.Drawing.Size(59, 23);
             this.lb_Username.TabIndex = 0;
             this.lb_Username.Text = "User !";
             // 
@@ -98,7 +98,7 @@
             // 
             // uc_Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -109,7 +109,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "uc_Dashboard";
-            this.Size = new System.Drawing.Size(570, 442);
+            this.Size = new System.Drawing.Size(760, 542);
             this.ResumeLayout(false);
             this.PerformLayout();
 

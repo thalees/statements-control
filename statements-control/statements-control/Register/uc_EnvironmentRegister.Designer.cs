@@ -1,6 +1,6 @@
-﻿namespace statements_control
+﻿namespace statements_control.Register
 {
-    partial class uc_TypesRegister
+    partial class uc_EnvironmentRegister
     {
         /// <summary> 
         /// Required designer variable.

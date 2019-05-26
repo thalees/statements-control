@@ -93,5 +93,18 @@ namespace Library.DAOs
 
             return Methods.SQLExecuteSelect("usp_SearchEnvironment", parameters.ToArray());
         }
+
+        public List<EnvironmentsVO> List(string name)
+        {
+            SqlParameter[] parameter = { new SqlParameter("@name", name) };
+            DataTable table = Methods.SQLSelectProcedure("usp_FilterEnvironmentsByName", parameter);
+
+            List<EnvironmentsVO> list = new List<EnvironmentsVO>();
+            foreach (DataRow row in table.Rows)
+            {
+                list.Add(BiuldVO(row) as EnvironmentsVO);
+            }
+            return list;
+        }
     }
 }

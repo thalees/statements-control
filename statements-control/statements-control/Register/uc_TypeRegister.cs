@@ -10,20 +10,19 @@ using System.Windows.Forms;
 
 namespace statements_control
 {
-    public partial class uc_About : UserControl
+    public partial class uc_TypeRegister : uc_DefaultRegister
     {
-        protected static uc_About _instance;
-
-        public static uc_About Instance
+        protected static uc_TypeRegister _instance;
+        public static uc_TypeRegister Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new uc_About();
+                    _instance = new uc_TypeRegister();
                 return _instance;
             }
         }
-        public uc_About()
+        public uc_TypeRegister()
         {
             InitializeComponent();
         }

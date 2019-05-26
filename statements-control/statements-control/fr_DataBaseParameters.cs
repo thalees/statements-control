@@ -84,11 +84,13 @@ namespace statements_control
             if(File.Exists(pathBase + pathFolder + "Users.sql"))
                 pathToExecute.Add(pathBase + pathFolder + "Users.sql");
             if (File.Exists(pathBase + pathFolder + "Types.sql"))
-                pathToExecute.Add(pathBase + pathFolder + "Statements.sql");
+                pathToExecute.Add(pathBase + pathFolder + "Types.sql");
             if (File.Exists(pathBase + pathFolder + "Statements.sql"))
                 pathToExecute.Add(pathBase + pathFolder + "Statements.sql");
             if (File.Exists(pathBase + pathFolder + "Investments.sql"))
                 pathToExecute.Add(pathBase + pathFolder + "Investments.sql");
+            if (File.Exists(pathBase + pathFolder + "Goals.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Goals.sql");
             if (File.Exists(pathBase + pathFolder + "Environments.sql"))
                 pathToExecute.Add(pathBase + pathFolder + "Environments.sql");
 
@@ -115,6 +117,10 @@ namespace statements_control
             if (File.Exists(pathBase + pathFolder + "Goals.sql"))
                 pathToExecute.Add(pathBase + pathFolder + "Goals.sql");
 
+            pathFolder = @"Initializer\";
+            if (File.Exists(pathBase + pathFolder + "Seeds.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "Seeds.sql");
+
             return pathToExecute;
         }
 
@@ -125,7 +131,8 @@ namespace statements_control
 
             foreach (string path in pathToExecute)
             {
-                ExecuteSQLFiles(path);
+                if (!ExecuteSQLFiles(path))
+                    break;
             }
         }
 
