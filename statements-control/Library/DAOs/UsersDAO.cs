@@ -9,9 +9,9 @@ using Library.VOs;
 
 namespace Library.DAOs
 {
-    class UsersDAO : MasterDAO
+    public class UsersDAO : MasterDAO
     {
-        protected override MasterVO BiuldVO(DataRow row)
+        public override MasterVO BiuldVO(DataRow row)
         {
             UsersVO user = new UsersVO();
 
@@ -23,7 +23,7 @@ namespace Library.DAOs
 
             return user;
         }
-        protected override SqlParameter[] CreateParameters(MasterVO vo)
+        public override SqlParameter[] CreateParameters(MasterVO vo)
         {
             SqlParameter[] parameters = {
                 new SqlParameter("id",(vo as UsersVO).Id),
@@ -35,7 +35,7 @@ namespace Library.DAOs
 
             return parameters;
         }
-        protected override MasterVO ObjectOrNull(DataTable table)
+        public override MasterVO ObjectOrNull(DataTable table)
         {
             if (table.Rows.Count == 0)
                 return null;
@@ -45,45 +45,45 @@ namespace Library.DAOs
 
 
 
-        protected override void SQLInsert(MasterVO vo)
+        public override void SQLInsert(MasterVO vo)
         {
             Methods.SQLNonQueryProcedure("usp_InsertUser", CreateParameters(vo));
         }
-        protected override void SQLUpdate(MasterVO vo)
+        public override void SQLUpdate(MasterVO vo)
         {
             Methods.SQLNonQueryProcedure("usp_UpdateUser", CreateParameters(vo));
         }
-        protected override void SQLDelete(int primaryKey)
+        public override void SQLDelete(int primaryKey)
         {
             SqlParameter[] parameter = { new SqlParameter("id", primaryKey) };
             Methods.SQLNonQueryProcedure("usp_DeleteUser", parameter);
         }
 
 
-        protected override MasterVO SQLFirst()
+        public override MasterVO SQLFirst()
         {
             DataTable table = Methods.SQLSelectProcedure("usp_FirstUser", null);
             return ObjectOrNull(table);
         }
-        protected override MasterVO SQLLast()
+        public override MasterVO SQLLast()
         {
             DataTable table = Methods.SQLSelectProcedure("usp_LastUser", null);
             return ObjectOrNull(table);
         }
-        protected override MasterVO SQLNext(int primaryKey)
+        public override MasterVO SQLNext(int primaryKey)
         {
             SqlParameter[] parameter = { new SqlParameter("@currentId", primaryKey) };
             DataTable table = Methods.SQLSelectProcedure("usp_NextUser", parameter);
             return ObjectOrNull(table);
         }
-        protected override MasterVO SQLPrevious(int primaryKey)
+        public override MasterVO SQLPrevious(int primaryKey)
         {
             SqlParameter[] parameter = { new SqlParameter("@currentId", primaryKey) };
             DataTable table = Methods.SQLSelectProcedure("usp_PreviousUser", parameter);
             return ObjectOrNull(table);
         }
 
-        protected override DataTable SQLSearch(MasterVO vo)
+        public override DataTable SQLSearch(MasterVO vo)
         {
             List<SqlParameter> parameters = new List<SqlParameter>();
 

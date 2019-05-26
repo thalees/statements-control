@@ -1,6 +1,4 @@
-USE [StatementsControl]
-GO
--- Insert
+
 CREATE PROCEDURE usp_InsertInvestment(
     @userId INT,
     @name VARCHAR(20), 
@@ -62,7 +60,6 @@ BEGIN
 END
 GO
 
-----------------------------------------
 
 CREATE PROCEDURE usp_ListAllInvestments (
 	@userId INT

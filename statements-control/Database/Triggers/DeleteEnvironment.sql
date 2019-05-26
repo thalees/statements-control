@@ -1,5 +1,3 @@
-USE [StatementsControl]
-GO
 
 CREATE TRIGGER tr_DeleteEnvironment ON [Environments] 
 INSTEAD OF DELETE AS

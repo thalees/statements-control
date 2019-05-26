@@ -1,5 +1,3 @@
-USE [StatementsControl]
-GO
 
 CREATE TRIGGER tr_DeleteType ON [Types] 
 INSTEAD OF DELETE AS

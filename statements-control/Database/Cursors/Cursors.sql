@@ -1,5 +1,3 @@
-USE [StatementsControl]
-GO
 
 CREATE PROCEDURE usp_ChangeAllTypeName (
 	@userId INT,
