@@ -42,7 +42,10 @@ namespace statements_control
             {
                 using (ConnectionDB.GetConnection())
                 {
-                    ChangeButtonColor(btn_Database, Color.SeaGreen);
+                    fr_Default _Default = new fr_Default();
+                    _Default.StartPosition = FormStartPosition.CenterParent;
+                    _Default.Show();
+                    Hide();
                 }
             }
             catch
@@ -50,7 +53,7 @@ namespace statements_control
                 MessageBox.Show("Erro ao conectar no Banco de Dados.", "Erro!",
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ChangeButtonColor(btn_Database, Color.Red);
-            }     
+            }
         }
 
         private void fr_Login_Load(object sender, EventArgs e)
