@@ -26,11 +26,10 @@ namespace Library.DAOs
         public override SqlParameter[] CreateParameters(MasterVO vo)
         {
             SqlParameter[] parameters = {
-                new SqlParameter("id",(vo as UsersVO).Id),
-                new SqlParameter("name", (vo as UsersVO).Name),
-                new SqlParameter("picture", (vo as UsersVO).Picture),
-                new SqlParameter("dtBirth", (vo as UsersVO).DateBirth),
-                new SqlParameter("password", (vo as UsersVO).Password),
+                new SqlParameter("@name", (vo as UsersVO).Name),
+                new SqlParameter("@picture", (vo as UsersVO).Picture),
+                new SqlParameter("@dateBirth", (vo as UsersVO).DateBirth),
+                new SqlParameter("@password", (vo as UsersVO).Password),
             };
 
             return parameters;

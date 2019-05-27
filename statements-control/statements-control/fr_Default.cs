@@ -1,4 +1,5 @@
-﻿using statements_control.Register;
+﻿using Library.VOs;
+using statements_control.Register;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,8 @@ namespace statements_control
 {
     public partial class fr_Default : Form
     {
-        public fr_Default()
+        public UsersVO currentUser = new UsersVO();
+        public fr_Default(UsersVO currentUser)
         {
             InitializeComponent();
         }

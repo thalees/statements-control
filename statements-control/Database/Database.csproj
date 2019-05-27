@@ -48,8 +48,15 @@
     <Folder Include="Functions\" />
     <Folder Include="Indexes\" />
     <Folder Include="Initializer\" />
-    <Folder Include="Stored Procedures\" />
     <Folder Include="Triggers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Stored Procedures\Database.sql" />
+    <Content Include="Stored Procedures\Environments.sql" />
+    <Content Include="Stored Procedures\Investments.sql" />
+    <Content Include="Stored Procedures\Statements.sql" />
+    <Content Include="Stored Procedures\Types.sql" />
+    <Content Include="Stored Procedures\Users.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
