@@ -26,6 +26,7 @@ namespace Library.DAOs
         {
             SqlParameter[] parameters = {
                 new SqlParameter("id",(vo as TypesVO).Id),
+                new SqlParameter("id",(vo as TypesVO).Name),
                 new SqlParameter("description", (vo as TypesVO).Description),
                 new SqlParameter("action", (vo as TypesVO).Action)
             };

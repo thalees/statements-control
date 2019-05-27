@@ -16,13 +16,14 @@ namespace Library.DAOs
             EnvironmentsVO environment = new EnvironmentsVO();
             environment.Id = Convert.ToInt32(row["id"]);
             environment.Name = row["name"].ToString();
+            environment.Description = row["description"].ToString();
             return environment;
         }
         public override SqlParameter[] CreateParameters(MasterVO vo)
         {
             SqlParameter[] parameters = {
-                new SqlParameter("id",(vo as EnvironmentsVO).Id),
                 new SqlParameter("name", (vo as EnvironmentsVO).Name),
+                new SqlParameter("description", (vo as EnvironmentsVO).Description)
             };
 
             return parameters;

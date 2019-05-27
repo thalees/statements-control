@@ -41,6 +41,7 @@ namespace statements_control.Register
                 {
                     txt_Id.Text = (objVO as EnvironmentsVO).Id.ToString();
                     txt_Name.Text = (objVO as EnvironmentsVO).Name;
+                    txt_Description.Text = (objVO as EnvironmentsVO).Description;
                 }
                 else
                 {
@@ -63,6 +64,7 @@ namespace statements_control.Register
             EnvironmentsVO environmentVO = new EnvironmentsVO();
             environmentVO.Id = Convert.ToInt32(txt_Id.Text);
             environmentVO.Name = txt_Name.Text;
+            environmentVO.Description = txt_Description.Text;
             return environmentVO;
         }
     }
