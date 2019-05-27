@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_DefaultRegister));
             this.btn_Search = new Bunifu.Framework.UI.BunifuThinButton2();
             this.uc_panel = new System.Windows.Forms.Panel();
+            this.txt_Name = new System.Windows.Forms.TextBox();
             this.txt_Id = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Insert = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.uc_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Id)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +75,9 @@
             // 
             // uc_panel
             // 
+            this.uc_panel.Controls.Add(this.txt_Name);
             this.uc_panel.Controls.Add(this.txt_Id);
+            this.uc_panel.Controls.Add(this.label2);
             this.uc_panel.Controls.Add(this.label1);
             this.uc_panel.Controls.Add(this.btn_Cancel);
             this.uc_panel.Controls.Add(this.btn_Save);
@@ -90,6 +94,13 @@
             this.uc_panel.Size = new System.Drawing.Size(759, 541);
             this.uc_panel.TabIndex = 1;
             // 
+            // txt_Name
+            // 
+            this.txt_Name.Location = new System.Drawing.Point(152, 182);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(100, 22);
+            this.txt_Name.TabIndex = 5;
+            // 
             // txt_Id
             // 
             this.txt_Id.Location = new System.Drawing.Point(61, 182);
@@ -100,7 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 151);
+            this.label1.Location = new System.Drawing.Point(60, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 17);
             this.label1.TabIndex = 3;
@@ -196,6 +207,15 @@
             this.btn_Insert.UseVisualStyleBackColor = true;
             this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(149, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nome";
+            // 
             // uc_DefaultRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,5 +246,7 @@
         private System.Windows.Forms.Button btn_Last;
         private System.Windows.Forms.Label label1;
         protected System.Windows.Forms.NumericUpDown txt_Id;
+        protected System.Windows.Forms.TextBox txt_Name;
+        private System.Windows.Forms.Label label2;
     }
 }

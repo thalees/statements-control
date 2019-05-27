@@ -16,6 +16,7 @@ namespace Library.DAOs
             TypesVO type = new TypesVO();
 
             type.Id = Convert.ToInt32(row["id"]);
+            type.Name = row["name"].ToString();
             type.Description = row["description"].ToString();
             type.Action = row["action"].ToString();
 

@@ -28,26 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_Name = new System.Windows.Forms.TextBox();
             this.uc_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Id)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Search
             // 
             this.btn_Search.Visible = false;
-            // 
-            // uc_panel
-            // 
-            this.uc_panel.Controls.Add(this.txt_Name);
-            this.uc_panel.Controls.SetChildIndex(this.btn_Search, 0);
-            this.uc_panel.Controls.SetChildIndex(this.txt_Name, 0);
-            // 
-            // txt_Name
-            // 
-            this.txt_Name.Location = new System.Drawing.Point(180, 182);
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(100, 22);
-            this.txt_Name.TabIndex = 5;
             // 
             // uc_EnvironmentRegister
             // 
@@ -56,12 +43,11 @@
             this.Name = "uc_EnvironmentRegister";
             this.uc_panel.ResumeLayout(false);
             this.uc_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Id)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txt_Name;
     }
 }
