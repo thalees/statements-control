@@ -28,10 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.uc_panel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Visible = false;
+            // 
+            // uc_panel
+            // 
+            this.uc_panel.Controls.Add(this.txt_Name);
+            this.uc_panel.Controls.SetChildIndex(this.btn_Search, 0);
+            this.uc_panel.Controls.SetChildIndex(this.txt_Name, 0);
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Location = new System.Drawing.Point(180, 182);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(100, 22);
+            this.txt_Name.TabIndex = 5;
+            // 
+            // uc_EnvironmentRegister
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "uc_EnvironmentRegister";
+            this.uc_panel.ResumeLayout(false);
+            this.uc_panel.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txt_Name;
     }
 }

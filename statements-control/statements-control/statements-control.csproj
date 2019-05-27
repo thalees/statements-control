@@ -156,6 +156,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Register\uc_EnvironmentRegister.resx">
+      <DependentUpon>uc_EnvironmentRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register\uc_StatementRegister.resx">
       <DependentUpon>uc_StatementRegister.cs</DependentUpon>
     </EmbeddedResource>
