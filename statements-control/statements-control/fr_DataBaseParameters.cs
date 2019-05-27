@@ -93,6 +93,8 @@ namespace statements_control
                 pathToExecute.Add(pathBase + pathFolder + "Goals.sql");
             if (File.Exists(pathBase + pathFolder + "Environments.sql"))
                 pathToExecute.Add(pathBase + pathFolder + "Environments.sql");
+            if (File.Exists(pathBase + pathFolder + "SearchUser.sql"))
+                pathToExecute.Add(pathBase + pathFolder + "SearchUser.sql");
 
 
             pathFolder = @"Triggers\";

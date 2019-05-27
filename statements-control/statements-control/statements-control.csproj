@@ -71,6 +71,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Register\uc_EnvironmentRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,14 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Register\uc_EnvironmentRegister.resx">
+      <DependentUpon>uc_EnvironmentRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register\uc_StatementRegister.resx">
       <DependentUpon>uc_StatementRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +204,12 @@
       <Project>{BBD5EFBB-56E8-429F-B29E-60DDF2DB0E34}</Project>
       <Name>Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserImageDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
