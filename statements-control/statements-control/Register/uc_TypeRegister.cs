@@ -42,7 +42,7 @@ namespace statements_control
                     txt_Id.Text = (objVO as TypesVO).Id.ToString();
                     txt_Name.Text = (objVO as TypesVO).Name;
                     txt_Description.Text = (objVO as TypesVO).Description;
-                    txt_Action.Text = (objVO as TypesVO).Action;
+                    cb_Action.Text = (objVO as TypesVO).Action;
                 }
                 else
                 {
@@ -66,7 +66,7 @@ namespace statements_control
             typeVO.Id = Convert.ToInt32(txt_Id.Text);
             typeVO.Name = txt_Name.Text;
             typeVO.Description = txt_Description.Text;
-            typeVO.Action = txt_Action.Text;
+            typeVO.Action = cb_Action.Text;
             return typeVO;
         }
     }

@@ -28,64 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_Description = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_Action = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cb_Action = new System.Windows.Forms.ComboBox();
             this.uc_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Id)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_panel
             // 
+            this.uc_panel.Controls.Add(this.cb_Action);
             this.uc_panel.Controls.Add(this.label3);
-            this.uc_panel.Controls.Add(this.txt_Action);
-            this.uc_panel.Controls.Add(this.label2);
+            this.uc_panel.Controls.Add(this.label4);
             this.uc_panel.Controls.Add(this.txt_Description);
             this.uc_panel.Controls.SetChildIndex(this.btn_Search, 0);
             this.uc_panel.Controls.SetChildIndex(this.txt_Id, 0);
             this.uc_panel.Controls.SetChildIndex(this.txt_Name, 0);
             this.uc_panel.Controls.SetChildIndex(this.txt_Description, 0);
-            this.uc_panel.Controls.SetChildIndex(this.label2, 0);
-            this.uc_panel.Controls.SetChildIndex(this.txt_Action, 0);
+            this.uc_panel.Controls.SetChildIndex(this.label4, 0);
             this.uc_panel.Controls.SetChildIndex(this.label3, 0);
+            this.uc_panel.Controls.SetChildIndex(this.cb_Action, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(140, 209);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Descrição";
             // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(291, 182);
+            this.txt_Description.Location = new System.Drawing.Point(143, 233);
+            this.txt_Description.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(144, 66);
-            this.txt_Description.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(288, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Descrição";
-            // 
-            // txt_Action
-            // 
-            this.txt_Action.Location = new System.Drawing.Point(291, 293);
-            this.txt_Action.Name = "txt_Action";
-            this.txt_Action.Size = new System.Drawing.Size(100, 22);
-            this.txt_Action.TabIndex = 8;
+            this.txt_Description.Size = new System.Drawing.Size(278, 60);
+            this.txt_Description.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 273);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(316, 149);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
-            this.label3.TabIndex = 9;
+            this.label3.Size = new System.Drawing.Size(43, 17);
+            this.label3.TabIndex = 23;
             this.label3.Text = "Ação";
+            // 
+            // cb_Action
+            // 
+            this.cb_Action.FormattingEnabled = true;
+            this.cb_Action.Items.AddRange(new object[] {
+            "Gasto",
+            "Lucro"});
+            this.cb_Action.Location = new System.Drawing.Point(319, 172);
+            this.cb_Action.Name = "cb_Action";
+            this.cb_Action.Size = new System.Drawing.Size(102, 21);
+            this.cb_Action.TabIndex = 24;
             // 
             // uc_TypeRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "uc_TypeRegister";
             this.uc_panel.ResumeLayout(false);
@@ -97,9 +106,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_Description;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb_Action;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_Action;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_Description;
     }
 }

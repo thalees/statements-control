@@ -124,7 +124,7 @@ namespace statements_control
             try
             {
                 registerDAO.SQLDelete(Convert.ToInt32(txt_Id.Text));
-                btn_First.PerformClick();
+                Inicializa();
             }
             catch (Exception erro)
             {
@@ -225,13 +225,20 @@ namespace statements_control
         {
             if (!DevMode())
             {
-                btn_First.PerformClick();
-                ChangeMode(NavigationTypeENUM.Navigation);
+                Inicializa();
             }
         }
 
         public void Inicializa() {
-            btn_First.PerformClick();
+            try
+            {
+                MasterVO objVO = registerDAO.SQLFirst();
+                FillScreen(objVO);
+            }
+            catch (Exception erro)
+            {
+                TrataErro(erro);
+            }
             ChangeMode(NavigationTypeENUM.Navigation);
         }
     }

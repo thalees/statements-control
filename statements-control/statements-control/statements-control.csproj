@@ -159,6 +159,12 @@
     <EmbeddedResource Include="Register\uc_EnvironmentRegister.resx">
       <DependentUpon>uc_EnvironmentRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Register\uc_GoalRegister.resx">
+      <DependentUpon>uc_GoalRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\uc_InvestimentRegister.resx">
+      <DependentUpon>uc_InvestimentRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register\uc_StatementRegister.resx">
       <DependentUpon>uc_StatementRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DefaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_register.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
