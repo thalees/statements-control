@@ -56,3 +56,35 @@ BEGIN
 	END CATCH
 END
 GO
+
+CREATE PROCEDURE usp_FirstGoal AS
+BEGIN
+	SELECT TOP 1 * FROM [Goals] [goal] order by [goal].id
+END
+GO
+
+CREATE PROCEDURE usp_LastGoal AS
+BEGIN
+	SELECT TOP 1 * FROM [Goals] [goal] order by [goal].id DESC
+END
+GO
+
+CREATE PROCEDURE usp_NextGoal (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Goals] [goal] WHERE [goal].id > @currentId 
+	order by [goal].id
+END
+GO
+
+CREATE PROCEDURE usp_PreviousGoal (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Goals] [goal] WHERE [goal].id < @currentId 
+	order by [goal].id DESC
+END
+GO

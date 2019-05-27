@@ -78,3 +78,35 @@ BEGIN
 	SELECT * FROM [Types] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
 END
 GO
+
+CREATE PROCEDURE usp_FirstType AS
+BEGIN
+	SELECT TOP 1 * FROM [Types] [types] order by [types].id
+END
+GO
+
+CREATE PROCEDURE usp_LastType AS
+BEGIN
+	SELECT TOP 1 * FROM [Types] [types] order by [types].id DESC
+END
+GO
+
+CREATE PROCEDURE usp_NextType (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Types] [types] WHERE [types].id > @currentId 
+	order by [types].id
+END
+GO
+
+CREATE PROCEDURE usp_PreviousType (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Types] [types] WHERE [types].id < @currentId 
+	order by [types].id DESC
+END
+GO
