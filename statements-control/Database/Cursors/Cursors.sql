@@ -13,11 +13,12 @@ BEGIN
 		DECLARE @typeDescription VARCHAR(100)
 		DECLARE @typeAction VARCHAR(10)
 
-		DECLARE cr_UpdateTypeNameToStatements CURSOR FOR 
-		SELECT [types].[id], [types].[description], [types].[action] FROM [Statements] [statements]
+		SELECT * INTO #tempTable FROM ( SELECT [types].[id], [types].[description], [types].[action] FROM [Statements] [statements]
 		INNER JOIN [Types] [types] ON [types].[id] = [statements].[typeId]
-		WHERE [statements].[userId] = @userId
+		WHERE [statements].[userId] = @userId ) AS x
 
+		DECLARE cr_UpdateTypeNameToStatements CURSOR FOR SELECT * FROM #tempTable
+				
 		OPEN cr_UpdateTypeNameToStatements
 
 		FETCH NEXT FROM cr_UpdateTypeNameToStatements INTO @typeId, @typeDescription, @typeAction
