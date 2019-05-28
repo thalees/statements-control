@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.ENUMs;
 using Library.VOs;
 
 namespace Library.DAOs
@@ -16,6 +17,7 @@ namespace Library.DAOs
             StatementsVO statement = new StatementsVO();
 
             statement.Id = Convert.ToInt32(row["id"]);
+            statement.Name = row["name"].ToString();
             statement.UserId = Convert.ToInt32(row["userId"]);
             statement.TypeId = Convert.ToInt32(row["typeId"]);
             statement.EnvironmentId = Convert.ToInt32(row["environmentId"]);
@@ -24,19 +26,40 @@ namespace Library.DAOs
 
             return statement;
         }
-        public override SqlParameter[] CreateParameters(MasterVO vo)
+        public override SqlParameter[] CreateParameters(MasterVO vo, ActionDatabaseENUM action)
         {
-            SqlParameter[] parameters = {
-                new SqlParameter("id",(vo as StatementsVO).Id),
-                new SqlParameter("userId", (vo as StatementsVO).UserId),
-                new SqlParameter("typeId", (vo as StatementsVO).TypeId),
-                new SqlParameter("environmentId", (vo as StatementsVO).EnvironmentId),
-                new SqlParameter("value", (vo as StatementsVO).Value),
-                new SqlParameter("date", (vo as StatementsVO).Date),
-            };
-
-            return parameters;
+            if (action == ActionDatabaseENUM.insert)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@name",(vo as StatementsVO).Name),
+                    new SqlParameter("@userId", (vo as StatementsVO).UserId),
+                    new SqlParameter("@typeId", (vo as StatementsVO).TypeId),
+                    new SqlParameter("@environmentId", (vo as StatementsVO).EnvironmentId),
+                    new SqlParameter("@value", (vo as StatementsVO).Value),
+                    new SqlParameter("@date", (vo as StatementsVO).Date),
+                };
+                return parameters;
+            }
+            else if (action == ActionDatabaseENUM.update)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@id",(vo as StatementsVO).Id),
+                    new SqlParameter("@name",(vo as StatementsVO).Name),
+                    new SqlParameter("@userId", (vo as StatementsVO).UserId),
+                    new SqlParameter("@typeId", (vo as StatementsVO).TypeId),
+                    new SqlParameter("@environmentId", (vo as StatementsVO).EnvironmentId),
+                    new SqlParameter("@value", (vo as StatementsVO).Value),
+                    new SqlParameter("@date", (vo as StatementsVO).Date),
+                };
+                return parameters;
+            }
+            else
+                throw new Exception("Escolha um método válido para executar.");
         }
+
+
         public override MasterVO ObjectOrNull(DataTable table)
         {
             if (table.Rows.Count == 0)
@@ -46,14 +69,13 @@ namespace Library.DAOs
         }
 
 
-
         public override void SQLInsert(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_InsertStatement", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_InsertStatement", CreateParameters(vo, ActionDatabaseENUM.insert));
         }
         public override void SQLUpdate(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_UpdateStatement", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_UpdateStatement", CreateParameters(vo, ActionDatabaseENUM.update));
         }
         public override void SQLDelete(int primaryKey)
         {

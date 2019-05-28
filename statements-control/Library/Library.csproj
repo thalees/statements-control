@@ -50,6 +50,7 @@
     <Compile Include="DAOs\StatementsDAO.cs" />
     <Compile Include="DAOs\TypesDAO.cs" />
     <Compile Include="DAOs\UsersDAO.cs" />
+    <Compile Include="ENUMs\ActionDBENUM.cs" />
     <Compile Include="ENUMs\MessageTypeENUM.cs" />
     <Compile Include="ENUMs\NavigationTypeENUM.cs" />
     <Compile Include="GlobalVariables.cs" />

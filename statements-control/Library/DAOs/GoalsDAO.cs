@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.ENUMs;
 using Library.VOs;
 
 namespace Library.DAOs
@@ -17,22 +18,39 @@ namespace Library.DAOs
 
             goal.Id = Convert.ToInt32(row["id"]);
             goal.UserId = Convert.ToInt32(row["userId"]);
-            goal.Name = (row["name"]).ToString();
+            goal.Name = row["name"].ToString();
             goal.EndDate = Convert.ToDateTime(row["endDate"]);
 
             return goal;
         }
-        public override SqlParameter[] CreateParameters(MasterVO vo)
+        public override SqlParameter[] CreateParameters(MasterVO vo, ActionDatabaseENUM action)
         {
-            SqlParameter[] parameters = {
-                new SqlParameter("id",(vo as GoalsVO).Id),
-                new SqlParameter("name", (vo as GoalsVO).Name),
-                new SqlParameter("userId", (vo as GoalsVO).UserId),
-                new SqlParameter("endDate", (vo as GoalsVO).EndDate),
-            };
-
-            return parameters;
+            if (action == ActionDatabaseENUM.insert)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@name", (vo as GoalsVO).Name),
+                    new SqlParameter("@userId", (vo as GoalsVO).UserId),
+                    new SqlParameter("@endDate", (vo as GoalsVO).EndDate),
+                };
+                return parameters;
+            }
+            else if (action == ActionDatabaseENUM.update)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@id",(vo as GoalsVO).Id),
+                    new SqlParameter("@name", (vo as GoalsVO).Name),
+                    new SqlParameter("@userId", (vo as GoalsVO).UserId),
+                    new SqlParameter("@endDate", (vo as GoalsVO).EndDate),
+                };
+                return parameters;
+            }
+            else
+                throw new Exception("Escolha um método válido para executar.");
         }
+
+
         public override MasterVO ObjectOrNull(DataTable table)
         {
             if (table.Rows.Count == 0)
@@ -42,14 +60,13 @@ namespace Library.DAOs
         }
 
 
-
         public override void SQLInsert(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_InsertGoal", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_InsertGoal", CreateParameters(vo, ActionDatabaseENUM.insert));
         }
         public override void SQLUpdate(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_UpdateGoal", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_UpdateGoal", CreateParameters(vo, ActionDatabaseENUM.update));
         }
         public override void SQLDelete(int primaryKey)
         {
