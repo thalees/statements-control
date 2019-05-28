@@ -50,34 +50,36 @@
             this.uc_panel.Controls.SetChildIndex(this.label3, 0);
             this.uc_panel.Controls.SetChildIndex(this.cb_Action, 0);
             // 
+            // txt_Name
+            // 
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(140, 209);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(52, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(94, 21);
             this.label4.TabIndex = 22;
             this.label4.Text = "Descrição";
             // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(143, 233);
-            this.txt_Description.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Description.Location = new System.Drawing.Point(56, 244);
+            this.txt_Description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(278, 60);
+            this.txt_Description.Size = new System.Drawing.Size(369, 73);
             this.txt_Description.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(316, 149);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(286, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
+            this.label3.Size = new System.Drawing.Size(57, 21);
             this.label3.TabIndex = 23;
             this.label3.Text = "Ação";
             // 
@@ -87,15 +89,17 @@
             this.cb_Action.Items.AddRange(new object[] {
             "Gasto",
             "Lucro"});
-            this.cb_Action.Location = new System.Drawing.Point(319, 172);
+            this.cb_Action.Location = new System.Drawing.Point(290, 169);
+            this.cb_Action.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_Action.Name = "cb_Action";
-            this.cb_Action.Size = new System.Drawing.Size(102, 21);
+            this.cb_Action.Size = new System.Drawing.Size(135, 24);
             this.cb_Action.TabIndex = 24;
             // 
             // uc_TypeRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "uc_TypeRegister";
             this.uc_panel.ResumeLayout(false);
             this.uc_panel.PerformLayout();

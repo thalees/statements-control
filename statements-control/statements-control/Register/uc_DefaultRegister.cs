@@ -154,14 +154,13 @@ namespace statements_control
 
         protected virtual MasterVO FillObject()
         {
-            return null; // é necessário ter algo .. não é void!  Programar nos descendentes
+            return null;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             if (txt_Id.Enabled)
                 FillScreen(registerDAO.SQLFirst());
-            else
                 // PreencheTela(registerDAO.SQLSearch(Convert.ToInt32(txt_Id.Text)));
 
             ChangeMode(NavigationTypeENUM.Navigation);

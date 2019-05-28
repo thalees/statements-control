@@ -34,10 +34,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_Id)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Search
-            // 
-            this.btn_Search.Visible = false;
-            // 
             // uc_panel
             // 
             this.uc_panel.Controls.Add(this.label3);
@@ -48,31 +44,39 @@
             this.uc_panel.Controls.SetChildIndex(this.txt_Description, 0);
             this.uc_panel.Controls.SetChildIndex(this.label3, 0);
             // 
+            // txt_Name
+            // 
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Visible = false;
+            // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(143, 233);
-            this.txt_Description.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Description.Location = new System.Drawing.Point(57, 246);
+            this.txt_Description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(278, 60);
+            this.txt_Description.Size = new System.Drawing.Size(369, 73);
             this.txt_Description.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(140, 209);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(53, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.Size = new System.Drawing.Size(94, 21);
             this.label3.TabIndex = 7;
             this.label3.Text = "Descrição";
             // 
             // uc_EnvironmentRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::statements_control.Properties.Resources.background_register;
+            this.BackgroundImage = null;
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "uc_EnvironmentRegister";
             this.uc_panel.ResumeLayout(false);
             this.uc_panel.PerformLayout();

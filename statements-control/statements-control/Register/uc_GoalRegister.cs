@@ -65,7 +65,7 @@ namespace statements_control.Register
             goalVO.Id = Convert.ToInt32(txt_Id.Text);
             goalVO.Name = txt_Name.Text;
             goalVO.EndDate = dt_EndDate.Value;
-            //goalVO.UserId = null;
+            // goalVO.UserId = null;
             return goalVO;
         }
     }
