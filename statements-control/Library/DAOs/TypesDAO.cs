@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.ENUMs;
 using Library.VOs;
 
 namespace Library.DAOs
@@ -22,17 +23,34 @@ namespace Library.DAOs
 
             return type;
         }
-        public override SqlParameter[] CreateParameters(MasterVO vo)
+        public override SqlParameter[] CreateParameters(MasterVO vo, ActionDatabaseENUM action)
         {
-            SqlParameter[] parameters = {
-                new SqlParameter("id",(vo as TypesVO).Id),
-                new SqlParameter("id",(vo as TypesVO).Name),
-                new SqlParameter("description", (vo as TypesVO).Description),
-                new SqlParameter("action", (vo as TypesVO).Action)
-            };
-
-            return parameters;
+            if (action == ActionDatabaseENUM.insert)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@name", (vo as TypesVO).Name),
+                    new SqlParameter("@description", (vo as TypesVO).Description),
+                    new SqlParameter("@action", (vo as TypesVO).Action)
+                };
+                return parameters;
+            }
+            else if (action == ActionDatabaseENUM.update)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@id",(vo as TypesVO).Id),
+                    new SqlParameter("@name", (vo as TypesVO).Name),
+                    new SqlParameter("@description", (vo as TypesVO).Description),
+                    new SqlParameter("@action", (vo as TypesVO).Action)
+                };
+                return parameters;
+            }
+            else
+                throw new Exception("Escolha um método válido para executar.");
         }
+
+
         public override MasterVO ObjectOrNull(DataTable table)
         {
             if (table.Rows.Count == 0)
@@ -42,14 +60,13 @@ namespace Library.DAOs
         }
 
 
-
         public override void SQLInsert(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_InsertType", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_InsertType", CreateParameters(vo, ActionDatabaseENUM.insert));
         }
         public override void SQLUpdate(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_UpdateType", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_UpdateType", CreateParameters(vo, ActionDatabaseENUM.update));
         }
         public override void SQLDelete(int primaryKey)
         {

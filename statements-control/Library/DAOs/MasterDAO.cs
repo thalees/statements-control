@@ -1,4 +1,5 @@
-﻿using Library.VOs;
+﻿using Library.ENUMs;
+using Library.VOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -25,7 +26,7 @@ namespace Library.DAOs
         public abstract MasterVO SQLNext(int primaryKey);
         public abstract MasterVO SQLPrevious(int primaryKey);
 
-        public abstract SqlParameter[] CreateParameters(MasterVO vo);
+        public abstract SqlParameter[] CreateParameters(MasterVO vo, ActionDatabaseENUM action);
         public abstract MasterVO BiuldVO(DataRow row);
 
         public abstract MasterVO ObjectOrNull(DataTable table);

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.ENUMs;
 using Library.VOs;
 
 namespace Library.DAOs
@@ -19,15 +20,32 @@ namespace Library.DAOs
             environment.Description = row["description"].ToString();
             return environment;
         }
-        public override SqlParameter[] CreateParameters(MasterVO vo)
+        public override SqlParameter[] CreateParameters(MasterVO vo, ActionDatabaseENUM action)
         {
-            SqlParameter[] parameters = {
-                new SqlParameter("name", (vo as EnvironmentsVO).Name),
-                new SqlParameter("description", (vo as EnvironmentsVO).Description)
-            };
-
-            return parameters;
+            if (action == ActionDatabaseENUM.insert)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@name", (vo as EnvironmentsVO).Name),
+                    new SqlParameter("@description", (vo as EnvironmentsVO).Description),
+                };
+                return parameters;
+            }
+            else if (action == ActionDatabaseENUM.update)
+            {
+                SqlParameter[] parameters = 
+                {
+                    new SqlParameter("@id",(vo as EnvironmentsVO).Id),
+                    new SqlParameter("@name", (vo as EnvironmentsVO).Name),
+                    new SqlParameter("@description", (vo as EnvironmentsVO).Description),
+                };
+                return parameters;
+            }
+            else
+                throw new Exception("Escolha um método válido para executar.");
         }
+
+
         public override MasterVO ObjectOrNull(DataTable table)
         {
             if (table.Rows.Count == 0)
@@ -37,14 +55,13 @@ namespace Library.DAOs
         }
 
 
-
         public override void SQLInsert(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_InsertEnvironment", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_InsertEnvironment", CreateParameters(vo, ActionDatabaseENUM.insert));
         }
         public override void SQLUpdate(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_UpdateEnvironment", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_UpdateEnvironment", CreateParameters(vo, ActionDatabaseENUM.update));
         }
         public override void SQLDelete(int primaryKey)
         {

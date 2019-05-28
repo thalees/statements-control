@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.ENUMs;
 using Library.VOs;
 
 namespace Library.DAOs
@@ -16,6 +17,7 @@ namespace Library.DAOs
             InvestmentsVO investment = new InvestmentsVO();
 
             investment.Id = Convert.ToInt32(row["id"]);
+            investment.Name = row["name"].ToString();
             investment.UserId = Convert.ToInt32(row["userId"]);
             investment.Value = Convert.ToDouble(row["value"]);
             investment.StartDate = Convert.ToDateTime(row["start"]);
@@ -23,18 +25,38 @@ namespace Library.DAOs
 
             return investment;
         }
-        public override SqlParameter[] CreateParameters(MasterVO vo)
+        public override SqlParameter[] CreateParameters(MasterVO vo, ActionDatabaseENUM action)
         {
-            SqlParameter[] parameters = {
-                new SqlParameter("id",(vo as InvestmentsVO).Id),
-                new SqlParameter("userId", (vo as InvestmentsVO).UserId),
-                new SqlParameter("value", (vo as InvestmentsVO).Value),
-                new SqlParameter("start", (vo as InvestmentsVO).StartDate),
-                new SqlParameter("end", (vo as InvestmentsVO).EndDate),
-            };
-
-            return parameters;
+            if (action == ActionDatabaseENUM.insert)
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@name", (vo as InvestmentsVO).Name),
+                    new SqlParameter("@userId", (vo as InvestmentsVO).UserId),
+                    new SqlParameter("@value", (vo as InvestmentsVO).Value),
+                    new SqlParameter("@start", (vo as InvestmentsVO).StartDate),
+                    new SqlParameter("@end", (vo as InvestmentsVO).EndDate),
+                };
+                return parameters;
+            }
+            else if (action == ActionDatabaseENUM.update)
+            {
+                SqlParameter[] parameters = 
+                {
+                    new SqlParameter("@id",(vo as InvestmentsVO).Id),
+                    new SqlParameter("@name", (vo as InvestmentsVO).Name),
+                    new SqlParameter("@userId", (vo as InvestmentsVO).UserId),
+                    new SqlParameter("@value", (vo as InvestmentsVO).Value),
+                    new SqlParameter("@start", (vo as InvestmentsVO).StartDate),
+                    new SqlParameter("@end", (vo as InvestmentsVO).EndDate),
+                };
+                return parameters;
+            }
+            else
+                throw new Exception("Escolha um método válido para executar.");
         }
+
+
         public override MasterVO ObjectOrNull(DataTable table)
         {
             if (table.Rows.Count == 0)
@@ -44,14 +66,13 @@ namespace Library.DAOs
         }
 
 
-
         public override void SQLInsert(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_InsertInvestment", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_InsertInvestment", CreateParameters(vo, ActionDatabaseENUM.insert));
         }
         public override void SQLUpdate(MasterVO vo)
         {
-            Methods.SQLNonQueryProcedure("usp_UpdateInvestment", CreateParameters(vo));
+            Methods.SQLNonQueryProcedure("usp_UpdateInvestment", CreateParameters(vo, ActionDatabaseENUM.update));
         }
         public override void SQLDelete(int primaryKey)
         {
