@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library.DAOs;
 using Library.VOs;
+using System.IO;
 
 namespace statements_control
 {
@@ -25,6 +26,22 @@ namespace statements_control
         {
             return null;
         }
+        protected void BiuldHTML()
+        {
+            string html = "<html> <head> <TITLE> Pesquisa HTML </ title> </ head> <BODY> <br>";
+            foreach(DataGridViewRow row in dgv_Listing.Rows)
+            {
+                for(int i = 0; i < dgv_Listing.Columns.Count; i++)
+                {
+                    html += $@"<b> {dgv_Listing.Columns[i].Name} </b>" + 
+                        $@"{row.Cells[dgv_Listing.Columns[i].Name].Value.ToString()} < br>";
+                }
+            }
+            html += "</BODY> </ html>";
+
+            File.WriteAllText("HTMLGrid.html", html);
+            web_GridHTML.Navigate("HTMLGrid.html");
+        }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -39,6 +56,11 @@ namespace statements_control
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        private void btn_HTML_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
