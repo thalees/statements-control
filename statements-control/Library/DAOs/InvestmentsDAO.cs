@@ -20,8 +20,8 @@ namespace Library.DAOs
             investment.Name = row["name"].ToString();
             investment.UserId = Convert.ToInt32(row["userId"]);
             investment.Value = Convert.ToDouble(row["value"]);
-            investment.StartDate = Convert.ToDateTime(row["start"]);
-            investment.EndDate = Convert.ToDateTime(row["end"]);
+            investment.StartDate = Convert.ToDateTime(row["startDate"]);
+            investment.EndDate = Convert.ToDateTime(row["endDate"]);
 
             return investment;
         }

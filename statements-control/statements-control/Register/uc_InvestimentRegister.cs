@@ -68,7 +68,7 @@ namespace statements_control.Register
             investmentsVO.Name = txt_Name.Text;
             investmentsVO.StartDate = dt_StartDate.Value;
             investmentsVO.EndDate = dt_EndDate.Value;
-            // investmentsVO.UserId = null;
+            //investmentsVO.UserId = ;
             return investmentsVO;
         }
     }

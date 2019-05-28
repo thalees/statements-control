@@ -103,19 +103,19 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE usp_FirstInvestiment AS
+CREATE PROCEDURE usp_FirstInvestment AS
 BEGIN
 	SELECT TOP 1 * FROM [Investments] [investments] order by [investments].id
 END
 GO
 
-CREATE PROCEDURE usp_LastInvestiment AS
+CREATE PROCEDURE usp_LastInvestment AS
 BEGIN
 	SELECT TOP 1 * FROM [Investments] [investments] order by [investments].id DESC
 END
 GO
 
-CREATE PROCEDURE usp_NextInvestiment (
+CREATE PROCEDURE usp_NextInvestment (
 	@currentId INT
 )
 AS
@@ -125,7 +125,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE usp_PreviousInvestiment (
+CREATE PROCEDURE usp_PreviousInvestment (
 	@currentId INT
 )
 AS
