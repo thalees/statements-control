@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.VOs
 {
-    class GoalsVO : MasterVO
+    public class GoalsVO : MasterVO
     {
         private DateTime endDate;
         private int userId;

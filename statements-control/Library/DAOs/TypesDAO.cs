@@ -16,6 +16,7 @@ namespace Library.DAOs
             TypesVO type = new TypesVO();
 
             type.Id = Convert.ToInt32(row["id"]);
+            type.Name = row["name"].ToString();
             type.Description = row["description"].ToString();
             type.Action = row["action"].ToString();
 
@@ -25,6 +26,7 @@ namespace Library.DAOs
         {
             SqlParameter[] parameters = {
                 new SqlParameter("id",(vo as TypesVO).Id),
+                new SqlParameter("id",(vo as TypesVO).Name),
                 new SqlParameter("description", (vo as TypesVO).Description),
                 new SqlParameter("action", (vo as TypesVO).Action)
             };

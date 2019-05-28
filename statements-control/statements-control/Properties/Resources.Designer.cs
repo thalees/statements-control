@@ -73,6 +73,16 @@ namespace statements_control.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_register {
+            get {
+                object obj = ResourceManager.GetObject("background_register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DefaultImage {
             get {
                 object obj = ResourceManager.GetObject("DefaultImage", resourceCulture);
