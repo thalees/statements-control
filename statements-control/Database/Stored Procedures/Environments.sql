@@ -71,3 +71,35 @@ BEGIN
 	SELECT * FROM [Environments] WHERE LOWER([name]) LIKE '%'+ @nameLowercase + '%'
 END
 GO
+
+CREATE PROCEDURE usp_FirstEnvironment AS
+BEGIN
+	SELECT TOP 1 * FROM [Environments] [environment] order by environment.id
+END
+GO
+
+CREATE PROCEDURE usp_LastEnvironment AS
+BEGIN
+	SELECT TOP 1 * FROM [Environments] [environment] order by environment.id DESC
+END
+GO
+
+CREATE PROCEDURE usp_NextEnvironment (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Environments] [environment] WHERE [environment].id > @currentId 
+	order by environment.id
+END
+GO
+
+CREATE PROCEDURE usp_PreviousEnvironment (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Environments] [environment] WHERE [environment].id < @currentId 
+	order by environment.id DESC
+END
+GO

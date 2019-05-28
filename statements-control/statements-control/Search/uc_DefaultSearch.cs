@@ -35,5 +35,10 @@ namespace statements_control
                 MessageBox.Show(SelectedId.ToString());
             }
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

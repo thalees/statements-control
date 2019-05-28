@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.VOs
 {
-    class InvestmentsVO : MasterVO
+    public class InvestmentsVO : MasterVO
     {
         private double value;
         private DateTime startDate;

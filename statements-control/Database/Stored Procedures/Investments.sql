@@ -102,3 +102,35 @@ BEGIN
 	WHERE [investments].[value] BETWEEN @minValue AND @maxValue
 END
 GO
+
+CREATE PROCEDURE usp_FirstInvestiment AS
+BEGIN
+	SELECT TOP 1 * FROM [Investments] [investments] order by [investments].id
+END
+GO
+
+CREATE PROCEDURE usp_LastInvestiment AS
+BEGIN
+	SELECT TOP 1 * FROM [Investments] [investments] order by [investments].id DESC
+END
+GO
+
+CREATE PROCEDURE usp_NextInvestiment (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Investments] [investments] WHERE [investments].id > @currentId 
+	order by [investments].id
+END
+GO
+
+CREATE PROCEDURE usp_PreviousInvestiment (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Investments] [investments] WHERE [investments].id < @currentId 
+	order by [investments].id DESC
+END
+GO

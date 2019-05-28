@@ -112,3 +112,35 @@ BEGIN
 	WHERE [statements].[date] BETWEEN @startDate AND @endDate
 END
 GO
+
+CREATE PROCEDURE usp_FirstStatement AS
+BEGIN
+	SELECT TOP 1 * FROM [Statements] [statements] order by [statements].id
+END
+GO
+
+CREATE PROCEDURE usp_LastStatement AS
+BEGIN
+	SELECT TOP 1 * FROM [Statements] [statements] order by [statements].id DESC
+END
+GO
+
+CREATE PROCEDURE usp_NextStatement (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Statements] [statements] WHERE [statements].id > @currentId 
+	order by [statements].id
+END
+GO
+
+CREATE PROCEDURE usp_PreviousStatement (
+	@currentId INT
+)
+AS
+BEGIN
+	SELECT TOP 1 * FROM [Statements] [statements] WHERE [statements].id < @currentId 
+	order by [statements].id DESC
+END
+GO

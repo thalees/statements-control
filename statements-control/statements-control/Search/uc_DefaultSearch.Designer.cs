@@ -30,8 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_DefaultSearch));
             this.dgv_Listing = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txt_Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btn_Back = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Listing)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,10 +84,37 @@
             this.txt_Search.TabIndex = 10;
             this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btn_Back
+            // 
+            this.btn_Back.ActiveBorderThickness = 1;
+            this.btn_Back.ActiveCornerRadius = 20;
+            this.btn_Back.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_Back.ActiveForecolor = System.Drawing.Color.White;
+            this.btn_Back.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_Back.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Back.BackgroundImage")));
+            this.btn_Back.ButtonText = "Voltar";
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_Back.IdleBorderThickness = 1;
+            this.btn_Back.IdleCornerRadius = 20;
+            this.btn_Back.IdleFillColor = System.Drawing.Color.White;
+            this.btn_Back.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btn_Back.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btn_Back.Location = new System.Drawing.Point(24, 18);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(111, 43);
+            this.btn_Back.TabIndex = 11;
+            this.btn_Back.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // uc_DefaultSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.dgv_Listing);
             this.Name = "uc_DefaultSearch";
@@ -98,5 +127,6 @@
         #endregion
         protected Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Listing;
         protected Bunifu.Framework.UI.BunifuMaterialTextbox txt_Search;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_Back;
     }
 }
