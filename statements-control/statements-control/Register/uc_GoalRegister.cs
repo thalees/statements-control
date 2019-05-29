@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Library.VOs;
 using Library.ENUMs;
 using Library.DAOs;
+using statements_control.Search;
 
 namespace statements_control.Register
 {
@@ -33,7 +34,7 @@ namespace statements_control.Register
             base.Inicializa();
         }
 
-        protected override void FillScreen(MasterVO objVO)
+        public override void FillScreen(MasterVO objVO)
         {
             try
             {
@@ -67,6 +68,21 @@ namespace statements_control.Register
             goalVO.EndDate = dt_EndDate.Value;
             // goalVO.UserId = null;
             return goalVO;
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            //if (!uc_panel.Controls.Contains(uc_GoalSearch.Instance))
+            //{
+            //    uc_panel.Controls.Add(uc_GoalSearch.Instance);
+            //    uc_GoalSearch.Instance.Dock = DockStyle.Fill;
+            //    uc_GoalSearch.Instance.BringToFront();
+            //}
+            //else
+            //{
+            //    uc_GoalSearch.Instance.BringToFront();
+            //    uc_GoalSearch.Instance.Visible = true;
+            //}
         }
     }
 }

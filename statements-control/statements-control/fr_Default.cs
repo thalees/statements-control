@@ -15,8 +15,9 @@ namespace statements_control
     public partial class fr_Default : Form
     {
         public UsersVO currentUser = new UsersVO();
-        public fr_Default(UsersVO currentUser)
+        public fr_Default(UsersVO parCurrentUser)
         {
+            this.currentUser = parCurrentUser;
             InitializeComponent();
         }
 
@@ -102,6 +103,16 @@ namespace statements_control
             }
             else
                 uc_EnvironmentRegister.Instance.BringToFront();
+        }
+
+        private void lb_Close_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void lb_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

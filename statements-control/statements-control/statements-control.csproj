@@ -106,6 +106,24 @@
     <Compile Include="Search\uc_EnvironmentSearch.Designer.cs">
       <DependentUpon>uc_EnvironmentSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search\uc_GoalSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\uc_GoalSearch.Designer.cs">
+      <DependentUpon>uc_GoalSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\uc_InvestmentSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\uc_InvestmentSearch.Designer.cs">
+      <DependentUpon>uc_InvestmentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\uc_StatementSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\uc_StatementSearch.Designer.cs">
+      <DependentUpon>uc_StatementSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\uc_TypeSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +188,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register\uc_TypeRegister.resx">
       <DependentUpon>uc_TypeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_EnvironmentSearch.resx">
+      <DependentUpon>uc_EnvironmentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_GoalSearch.resx">
+      <DependentUpon>uc_GoalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_InvestmentSearch.resx">
+      <DependentUpon>uc_InvestmentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_StatementSearch.resx">
+      <DependentUpon>uc_StatementSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search\uc_TypeSearch.resx">
       <DependentUpon>uc_TypeSearch.cs</DependentUpon>

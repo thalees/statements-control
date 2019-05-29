@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Library.VOs;
 using Library.DAOs;
 using Library.ENUMs;
+using statements_control.Search;
 
 namespace statements_control
 {
@@ -33,7 +34,7 @@ namespace statements_control
             base.Inicializa();
         }
 
-        protected override void FillScreen(MasterVO objVO)
+        public override void FillScreen(MasterVO objVO)
         {
             try
             {
@@ -68,6 +69,21 @@ namespace statements_control
             typeVO.Description = txt_Description.Text;
             typeVO.Action = cb_Action.Text;
             return typeVO;
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if (!uc_panel.Controls.Contains(uc_TypeSearch.Instance))
+            {
+                uc_panel.Controls.Add(uc_TypeSearch.Instance);
+                uc_TypeSearch.Instance.Dock = DockStyle.Fill;
+                uc_TypeSearch.Instance.BringToFront();
+            }
+            else
+            {
+                uc_TypeSearch.Instance.BringToFront();
+                uc_TypeSearch.Instance.Visible = true;
+            }
         }
     }
 }

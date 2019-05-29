@@ -20,8 +20,8 @@ namespace Library.DAOs
             investment.Name = row["name"].ToString();
             investment.UserId = Convert.ToInt32(row["userId"]);
             investment.Value = Convert.ToDouble(row["value"]);
-            investment.StartDate = Convert.ToDateTime(row["start"]);
-            investment.EndDate = Convert.ToDateTime(row["end"]);
+            investment.StartDate = Convert.ToDateTime(row["startDate"]);
+            investment.EndDate = Convert.ToDateTime(row["endDate"]);
 
             return investment;
         }
@@ -111,31 +111,25 @@ namespace Library.DAOs
 
             if ((vo as InvestmentsVO).Id > 0)
                 parameters.Add(new SqlParameter("@id", (vo as InvestmentsVO).Id));
-            else
-                parameters.Add(new SqlParameter("@id", DBNull.Value));
+
+            if (!string.IsNullOrEmpty((vo as InvestmentsVO).Name))
+                parameters.Add(new SqlParameter("@name", (vo as InvestmentsVO).Name));
 
             if ((vo as InvestmentsVO).UserId > 0)
                 parameters.Add(new SqlParameter("@userId", (vo as InvestmentsVO).UserId));
-            else
-                parameters.Add(new SqlParameter("@userId", DBNull.Value));
 
             if ((vo as InvestmentsVO).Value > 0)
                 parameters.Add(new SqlParameter("@value", (vo as InvestmentsVO).Value));
-            else
-                parameters.Add(new SqlParameter("@value", DBNull.Value));
 
             if ((vo as InvestmentsVO).StartDate > DateTime.Now)
                 parameters.Add(new SqlParameter("@start", (vo as InvestmentsVO).StartDate));
-            else
-                parameters.Add(new SqlParameter("@start", DBNull.Value));
+
 
             if ((vo as InvestmentsVO).EndDate < DateTime.Now)
                 parameters.Add(new SqlParameter("@end", (vo as InvestmentsVO).EndDate));
-            else
-                parameters.Add(new SqlParameter("@end", DBNull.Value));
 
 
-            return Methods.SQLExecuteSelect("usp_SearchInvestment", parameters.ToArray());
+            return Methods.SQLSelectProcedure("usp_FilterInvestmentsByName", parameters.ToArray());
         }
     }
 }

@@ -105,33 +105,24 @@ namespace Library.DAOs
         {
             List<SqlParameter> parameters = new List<SqlParameter>();
 
-
             if ((vo as UsersVO).Id > 0)
                 parameters.Add(new SqlParameter("@id", (vo as UsersVO).Id));
-            else
-                parameters.Add(new SqlParameter("@id", DBNull.Value));
 
-            if (string.IsNullOrEmpty((vo as UsersVO).Name))
+            if (!string.IsNullOrEmpty((vo as UsersVO).Name))
                 parameters.Add(new SqlParameter("@name", (vo as UsersVO).Name));
-            else
-                parameters.Add(new SqlParameter("@name", DBNull.Value));
+
 
             if ((vo as UsersVO).Picture.Length > 0)
                 parameters.Add(new SqlParameter("@picture", (vo as UsersVO).Picture));
-            else
-                parameters.Add(new SqlParameter("@picture", DBNull.Value));
 
-            if ((vo as UsersVO).DateBirth > DateTime.Now)
+            if ((vo as UsersVO).DateBirth < DateTime.Now)
                 parameters.Add(new SqlParameter("@dtBirth", (vo as UsersVO).DateBirth));
-            else
-                parameters.Add(new SqlParameter("@dtbirth", DBNull.Value));
 
             if (!string.IsNullOrEmpty((vo as UsersVO).Password))
                 parameters.Add(new SqlParameter("@password", (vo as UsersVO).Password));
-            else
-                parameters.Add(new SqlParameter("@password", DBNull.Value));
 
-            return Methods.SQLExecuteSelect("usp_SearchUser", parameters.ToArray());
+
+            return Methods.SQLSelectProcedure("usp_FilterUsersByName", parameters.ToArray());
         }
     }
 }

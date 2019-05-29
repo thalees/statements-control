@@ -1,6 +1,6 @@
 ﻿namespace statements_control.Search
 {
-    partial class uc_EnvironmentSearch
+    partial class uc_StatementSearch
     {
         /// <summary> 
         /// Required designer variable.
@@ -38,12 +38,12 @@
             // 
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
-            // uc_EnvironmentSearch
+            // uc_StatementSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "uc_EnvironmentSearch";
-            this.Load += new System.EventHandler(this.uc_EnvironmentSearch_Load);
+            this.Name = "uc_StatementSearch";
+            this.Load += new System.EventHandler(this.uc_StatementSearch_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

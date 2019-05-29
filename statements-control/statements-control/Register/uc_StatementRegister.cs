@@ -34,7 +34,7 @@ namespace statements_control.Register
             base.Inicializa();
         }
 
-        protected override void FillScreen(MasterVO objVO)
+        public override void FillScreen(MasterVO objVO)
         {
             try
             {
@@ -78,16 +78,16 @@ namespace statements_control.Register
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (!uc_panel.Controls.Contains(uc_TypeSearch.Instance))
+            if (!uc_panel.Controls.Contains(uc_StatementSearch.Instance))
             {
-                uc_panel.Controls.Add(uc_TypeSearch.Instance);
-                uc_TypeSearch.Instance.Dock = DockStyle.Fill;
-                uc_TypeSearch.Instance.BringToFront();
+                uc_panel.Controls.Add(uc_StatementSearch.Instance);
+                uc_StatementSearch.Instance.Dock = DockStyle.Fill;
+                uc_StatementSearch.Instance.BringToFront();
             }
             else
             {
-                uc_TypeSearch.Instance.BringToFront();
-                uc_TypeSearch.Instance.Visible = true;
+                uc_StatementSearch.Instance.BringToFront();
+                uc_StatementSearch.Instance.Visible = true;
             }
         }
     }

@@ -21,6 +21,7 @@ namespace statements_control
 {
     public partial class fr_Login : Form
     {
+        byte[] pictureArray;
         public fr_Login()
         {
             InitializeComponent();
@@ -62,8 +63,8 @@ namespace statements_control
                     {
                         currentUser.Id = Convert.ToInt32(row["id"].ToString());
                         currentUser.Name = row["name"].ToString();
-                        currentUser.Picture = (row["picture"] as byte[]);
                         currentUser.DateBirth = Convert.ToDateTime(row["dateBirth"]);
+                        currentUser.Picture = (row["picture"] as byte[]);
                     }
                 }
 
@@ -154,6 +155,7 @@ namespace statements_control
             if (imageSearch.ShowDialog() == DialogResult.OK)
             {
                 pic_userPicture.ImageLocation = imageSearch.FileName;
+                pictureArray = File.ReadAllBytes(imageSearch.FileName);
             }
         }
     }

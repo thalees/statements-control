@@ -13,43 +13,44 @@ using statements_control.Register;
 
 namespace statements_control.Search
 {
-    public partial class uc_EnvironmentSearch : uc_DefaultSearch
+    public partial class uc_InvestmentSearch : uc_DefaultSearch
     {
-        private static uc_EnvironmentSearch _instance;
+        private static uc_InvestmentSearch _instance;
 
-        public static uc_EnvironmentSearch Instance
+        public static uc_InvestmentSearch Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new uc_EnvironmentSearch();
+                    _instance = new uc_InvestmentSearch();
                 return _instance;
             }
         }
-        public uc_EnvironmentSearch()
+
+        public uc_InvestmentSearch()
         {
             InitializeComponent();
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txt_Name.Text))
+            if (string.IsNullOrEmpty(txt_Name.Text))
             {
                 MessageBox.Show("Digite um valor válido para o nome.");
             }
             else
             {
-                EnvironmentsDAO dao = new EnvironmentsDAO();
+                InvestmentsDAO dao = new InvestmentsDAO();
 
-                EnvironmentsVO type = new EnvironmentsVO();
-                type.Name = txt_Name.Text;
+                InvestmentsVO statement = new InvestmentsVO();
+                statement.Name = txt_Name.Text;
 
-                DataTable table = dao.SQLSearch(type);
+                DataTable table = dao.SQLSearch(statement);
                 dgv_Listing.DataSource = table;
             }
         }
 
-        private void uc_EnvironmentSearch_Load(object sender, EventArgs e)
+        private void uc_InvestmentSearch_Load(object sender, EventArgs e)
         {
             base.SetupGrid();
         }
@@ -58,12 +59,13 @@ namespace statements_control.Search
         {
             if (dgv_Listing.CurrentRow != null)
             {
-                EnvironmentsVO environment = new EnvironmentsVO();
-                environment.Id = Convert.ToInt32(dgv_Listing.CurrentRow.Cells[0].Value);
-                environment.Name = dgv_Listing.CurrentRow.Cells[1].Value.ToString();
-                environment.Description = dgv_Listing.CurrentRow.Cells[2].Value.ToString();
+                InvestmentsVO investment = new InvestmentsVO();
+                investment.Id = Convert.ToInt32(dgv_Listing.CurrentRow.Cells[0].Value);
+                investment.Name = dgv_Listing.CurrentRow.Cells[1].Value.ToString();
+                investment.StartDate = Convert.ToDateTime(dgv_Listing.CurrentRow.Cells[2].Value.ToString());
+                investment.Value = Convert.ToDouble(dgv_Listing.CurrentRow.Cells[3].Value);
 
-                uc_EnvironmentRegister.Instance.FillScreen(environment);
+                //uc_InvestimentRegister.FillScreen(investment);
                 this.Visible = false;
             }
             else

@@ -106,20 +106,17 @@ namespace Library.DAOs
 
             if ((vo as TypesVO).Id > 0)
                 parameters.Add(new SqlParameter("@id", (vo as TypesVO).Id));
-            else
-                parameters.Add(new SqlParameter("@id", DBNull.Value));
+
+            if (!string.IsNullOrEmpty((vo as TypesVO).Name))
+                parameters.Add(new SqlParameter("@name", (vo as TypesVO).Name));
 
             if (!string.IsNullOrEmpty((vo as TypesVO).Description))
                 parameters.Add(new SqlParameter("@description", (vo as TypesVO).Description));
-            else
-                parameters.Add(new SqlParameter("@description", DBNull.Value));
 
             if (!string.IsNullOrEmpty((vo as TypesVO).Action))
                 parameters.Add(new SqlParameter("@action", (vo as TypesVO).Action));
-            else
-                parameters.Add(new SqlParameter("@action", DBNull.Value));
 
-            return Methods.SQLExecuteSelect("usp_SearchType", parameters.ToArray());
+            return Methods.SQLSelectProcedure("usp_FilterTypesByName", parameters.ToArray());
         }
 
         public List<TypesVO> List(string name)

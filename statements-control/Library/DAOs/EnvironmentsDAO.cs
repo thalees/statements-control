@@ -100,16 +100,14 @@ namespace Library.DAOs
 
             if ((vo as EnvironmentsVO).Id > 0)
                 parameters.Add(new SqlParameter("@id", (vo as EnvironmentsVO).Id));
-            else
-                parameters.Add(new SqlParameter("@id", DBNull.Value));
 
             if(!string.IsNullOrEmpty((vo as EnvironmentsVO).Name))
                 parameters.Add(new SqlParameter("@name", (vo as EnvironmentsVO).Name));
-            else
-                parameters.Add(new SqlParameter("@name", DBNull.Value));
 
+            if (!string.IsNullOrEmpty((vo as EnvironmentsVO).Description))
+                parameters.Add(new SqlParameter("@name", (vo as EnvironmentsVO).Description));
 
-            return Methods.SQLExecuteSelect("usp_SearchEnvironment", parameters.ToArray());
+            return Methods.SQLSelectProcedure("usp_FilterEnvironmentsByName", parameters.ToArray());
         }
 
         public List<EnvironmentsVO> List(string name)
