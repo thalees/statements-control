@@ -114,36 +114,27 @@ namespace Library.DAOs
 
             if ((vo as StatementsVO).Id > 0)
                 parameters.Add(new SqlParameter("@id", (vo as StatementsVO).Id));
-            else
-                parameters.Add(new SqlParameter("@id", DBNull.Value));
+
+            if (!string.IsNullOrEmpty((vo as StatementsVO).Name))
+                parameters.Add(new SqlParameter("@name", (vo as StatementsVO).Name));
 
             if ((vo as StatementsVO).UserId > 0)
                 parameters.Add(new SqlParameter("@userId", (vo as StatementsVO).UserId));
-            else
-                parameters.Add(new SqlParameter("@userId", DBNull.Value));
 
             if ((vo as StatementsVO).TypeId > 0)
                 parameters.Add(new SqlParameter("@typeId", (vo as StatementsVO).TypeId));
-            else
-                parameters.Add(new SqlParameter("@TypeId", DBNull.Value));
 
             if ((vo as StatementsVO).EnvironmentId > 0)
                 parameters.Add(new SqlParameter("@environmentId", (vo as StatementsVO).EnvironmentId));
-            else
-                parameters.Add(new SqlParameter("@environmentId", DBNull.Value));
 
             if ((vo as StatementsVO).Value > 0)
                 parameters.Add(new SqlParameter("@value", (vo as StatementsVO).Value));
-            else
-                parameters.Add(new SqlParameter("@value", DBNull.Value));
 
             if ((vo as StatementsVO).Date > DateTime.Now)
                 parameters.Add(new SqlParameter("@date", (vo as StatementsVO).Date));
-            else
-                parameters.Add(new SqlParameter("@date", DBNull.Value));
 
 
-            return Methods.SQLExecuteSelect("usp_SearchStatement", parameters.ToArray());
+            return Methods.SQLSelectProcedure("usp_FilterStatementsByName", parameters.ToArray());
         }
     }
 }

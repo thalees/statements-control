@@ -30,11 +30,24 @@
         {
             this.SuspendLayout();
             // 
+            // btn_Pesquisar
+            // 
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
+            // 
+            // btn_Confirm
+            // 
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click_1);
+            // 
             // uc_TypeSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "uc_TypeSearch";
+            this.Load += new System.EventHandler(this.uc_TypeSearch_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

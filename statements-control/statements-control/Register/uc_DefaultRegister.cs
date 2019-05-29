@@ -24,7 +24,7 @@ namespace statements_control
             InitializeComponent();
         }
 
-        protected virtual void FillScreen(MasterVO obj)
+        public virtual void FillScreen(MasterVO obj)
         {
             //preencher nos filhos
         }

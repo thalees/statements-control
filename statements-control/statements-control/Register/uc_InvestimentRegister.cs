@@ -35,7 +35,7 @@ namespace statements_control.Register
             base.Inicializa();
         }
 
-        protected override void FillScreen(MasterVO objVO)
+        public override void FillScreen(MasterVO objVO)
         {
             try
             {
@@ -75,17 +75,17 @@ namespace statements_control.Register
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (!uc_panel.Controls.Contains(uc_InvestmentSearch.Instance))
-            {
-                uc_panel.Controls.Add(uc_InvestmentSearch.Instance);
-                uc_InvestmentSearch.Instance.Dock = DockStyle.Fill;
-                uc_InvestmentSearch.Instance.BringToFront();
-            }
-            else
-            {
-                uc_InvestmentSearch.Instance.BringToFront();
-                uc_InvestmentSearch.Instance.Visible = true;
-            }
+            //if (!uc_panel.Controls.Contains(uc_InvestmentSearch.Instance))
+            //{
+            //    uc_panel.Controls.Add(uc_InvestmentSearch.Instance);
+            //    uc_InvestmentSearch.Instance.Dock = DockStyle.Fill;
+            //    uc_InvestmentSearch.Instance.BringToFront();
+            //}
+            //else
+            //{
+            //    uc_InvestmentSearch.Instance.BringToFront();
+            //    uc_InvestmentSearch.Instance.Visible = true;
+            //}
         }
     }
 }

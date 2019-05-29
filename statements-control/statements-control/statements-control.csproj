@@ -192,6 +192,15 @@
     <EmbeddedResource Include="Search\uc_EnvironmentSearch.resx">
       <DependentUpon>uc_EnvironmentSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_GoalSearch.resx">
+      <DependentUpon>uc_GoalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_InvestmentSearch.resx">
+      <DependentUpon>uc_InvestmentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\uc_StatementSearch.resx">
+      <DependentUpon>uc_StatementSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search\uc_TypeSearch.resx">
       <DependentUpon>uc_TypeSearch.cs</DependentUpon>
     </EmbeddedResource>

@@ -105,26 +105,21 @@ namespace Library.DAOs
 
             if ((vo as GoalsVO).Id > 0)
                 parameters.Add(new SqlParameter("@id", (vo as GoalsVO).Id));
-            else
-                parameters.Add(new SqlParameter("@id", DBNull.Value));
+
+            if (!string.IsNullOrEmpty((vo as GoalsVO).Name))
+                parameters.Add(new SqlParameter("@name", (vo as GoalsVO).Name));
 
             if ((vo as GoalsVO).UserId > 0)
                 parameters.Add(new SqlParameter("@userId", (vo as GoalsVO).UserId));
-            else
-                parameters.Add(new SqlParameter("@userId", DBNull.Value));
 
             if (!string.IsNullOrEmpty((vo as GoalsVO).Name))
                 parameters.Add(new SqlParameter("@typeId", (vo as GoalsVO).Name));
-            else
-                parameters.Add(new SqlParameter("@TypeId", DBNull.Value));
 
             if ((vo as GoalsVO).EndDate < DateTime.Now)
                 parameters.Add(new SqlParameter("@date", (vo as GoalsVO).EndDate));
-            else
-                parameters.Add(new SqlParameter("@date", DBNull.Value));
 
 
-            return Methods.SQLExecuteSelect("usp_SearchGoal", parameters.ToArray());
+            return Methods.SQLSelectProcedure("fn_FilterGoalsByName", parameters.ToArray());
         }
     }
 }
