@@ -121,8 +121,8 @@ namespace statements_control
             {
                 try
                 {
-                    //ImageConverter converter = new ImageConverter();
-                    //byte[] imageArray = (byte[])converter.ConvertTo(pic_userPicture.Image, typeof(byte[]));
+                    ImageConverter converter = new ImageConverter();
+                    byte[] imageArray = (byte[])converter.ConvertTo(pic_userPicture.Image, typeof(byte[]));
 
                     UsersDAO userDAO = new UsersDAO();
                     UsersVO user = new UsersVO();
@@ -130,7 +130,7 @@ namespace statements_control
                     user.Password = txt_RegisterPassword.Text;
                     user.DateBirth = Convert.ToDateTime(dtp_DateBirth.Value.ToShortDateString());
 
-                    user.Picture = pictureArray;
+                    user.Picture = imageArray;
 
                     userDAO.SQLInsert(user);
 

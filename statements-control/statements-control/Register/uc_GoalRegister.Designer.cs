@@ -46,16 +46,19 @@
             // 
             // txt_Name
             // 
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 219);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(40, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 21);
+            this.label3.Size = new System.Drawing.Size(137, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "Data de finalização";
             // 
@@ -63,17 +66,18 @@
             // 
             this.dt_EndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_EndDate.Location = new System.Drawing.Point(57, 258);
+            this.dt_EndDate.Location = new System.Drawing.Point(43, 210);
+            this.dt_EndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dt_EndDate.Name = "dt_EndDate";
-            this.dt_EndDate.Size = new System.Drawing.Size(149, 27);
+            this.dt_EndDate.Size = new System.Drawing.Size(113, 23);
             this.dt_EndDate.TabIndex = 31;
             // 
             // uc_GoalRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = null;
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_GoalRegister";
             this.uc_panel.ResumeLayout(false);
             this.uc_panel.PerformLayout();

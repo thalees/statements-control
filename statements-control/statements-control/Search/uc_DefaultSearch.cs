@@ -60,7 +60,7 @@ namespace statements_control
 
         private void btn_HTML_Click(object sender, EventArgs e)
         {
-
+            dgv_Listing.Visible = false;
         }
     }
 }

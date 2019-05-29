@@ -58,16 +58,19 @@
             // 
             // txt_Name
             // 
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 221);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(197, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 21);
+            this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 22;
             this.label3.Text = "Data final";
             // 
@@ -75,29 +78,26 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 221);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(40, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 21);
+            this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 24;
             this.label4.Text = "Data inicial";
             // 
             // txt_Value
             // 
-            this.txt_Value.Location = new System.Drawing.Point(294, 171);
-            this.txt_Value.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Value.Location = new System.Drawing.Point(220, 139);
             this.txt_Value.Name = "txt_Value";
-            this.txt_Value.Size = new System.Drawing.Size(121, 22);
+            this.txt_Value.Size = new System.Drawing.Size(92, 20);
             this.txt_Value.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(290, 141);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(218, 115);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 21);
+            this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 26;
             this.label5.Text = "Valor";
             // 
@@ -105,25 +105,27 @@
             // 
             this.dt_EndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_EndDate.Location = new System.Drawing.Point(267, 258);
+            this.dt_EndDate.Location = new System.Drawing.Point(200, 210);
+            this.dt_EndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dt_EndDate.Name = "dt_EndDate";
-            this.dt_EndDate.Size = new System.Drawing.Size(149, 27);
+            this.dt_EndDate.Size = new System.Drawing.Size(113, 23);
             this.dt_EndDate.TabIndex = 31;
             // 
             // dt_StartDate
             // 
             this.dt_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_StartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_StartDate.Location = new System.Drawing.Point(57, 258);
+            this.dt_StartDate.Location = new System.Drawing.Point(43, 210);
+            this.dt_StartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dt_StartDate.Name = "dt_StartDate";
-            this.dt_StartDate.Size = new System.Drawing.Size(149, 27);
+            this.dt_StartDate.Size = new System.Drawing.Size(113, 23);
             this.dt_StartDate.TabIndex = 32;
             // 
             // uc_InvestimentRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_InvestimentRegister";
             this.uc_panel.ResumeLayout(false);
             this.uc_panel.PerformLayout();
